@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/heli-forklift-ph' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/heli-forklift-ph' : '',
+  basePath: isProd ? '/heli-forklift-ph' : '',
+  assetPrefix: isProd ? '/heli-forklift-ph' : '',
   trailingSlash: true,
 }
 

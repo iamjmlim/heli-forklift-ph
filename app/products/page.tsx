@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Battery, Truck, PackageOpen, Boxes, Forklift, Package, Zap, Factory, Warehouse, TrendingUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { getAssetPath } from '@/lib/paths'
 
 const productCategories = [
   {
@@ -223,7 +224,7 @@ export default function ProductsPage() {
                         {product.images.map((imagePath, imgIndex) => (
                           <div key={imgIndex} className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                             <Image
-                              src={imagePath}
+                              src={getAssetPath(imagePath)}
                               alt={`${product.category} - Model ${imgIndex + 1}`}
                               fill
                               className="object-contain p-2"

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Truck, Wrench, Users, Shield, ArrowRight, Battery, PackageOpen, Boxes } from 'lucide-react'
+import { getAssetPath } from '@/lib/paths'
 
 export default function HomePage() {
   return (
@@ -34,7 +35,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/Heli/Lithium Batter Forklift/G2 series 1.5-3.8 tons lithium battery counterbalanced forklift.avif"
+                src={getAssetPath('/Heli/Lithium Batter Forklift/G2 series 1.5-3.8 tons lithium battery counterbalanced forklift.avif')}
                 alt="HELI Lithium Battery Forklift - Premium Material Handling Equipment"
                 fill
                 className="object-contain"
