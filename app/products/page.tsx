@@ -13,9 +13,9 @@ const productCategories = [
     description: 'Advanced eco-friendly electric forklifts powered by cutting-edge lithium-ion technology for superior performance and efficiency',
     capacityRange: '1.0 - 10.0 tons',
     images: [
-      '/Heli/Lithium Battery Forklift/H3 series 1-2.5 tons lithium battery counterbalanced forklift.avif',
-      '/Heli/Lithium Battery Forklift/G2 series 1.5-3.8 tons lithium battery counterbalanced forklift.avif',
-      '/Heli/Lithium Battery Forklift/G3 series 4-5 tons lithium battery counterbalanced forklift.avif',
+      '/Heli/Lithium Batter Forklift/H3 series 1-2.5 tons lithium battery counterbalanced forklift.avif',
+      '/Heli/Lithium Batter Forklift/G2 series 1.5-3.8 tons lithium battery counterbalanced forklift.avif',
+      '/Heli/Lithium Batter Forklift/G3 series 4-5 tons lithium battery counterbalanced forklift.avif',
     ],
     highlights: [
       'Zero emissions for indoor operations',
@@ -66,7 +66,6 @@ const productCategories = [
     description: 'Robust diesel, LPG, and gasoline forklifts engineered for demanding outdoor applications and heavy-duty operations',
     capacityRange: '6.0 - 10.0 tons',
     images: [
-      '/Heli/Internal Combustion Forklift Series/H2000 series 6-8-10 tons diesel counterbalanced forklift.avif',
       '/Heli/Internal Combustion Forklift Series/G series 8.5-10 tons diesel counterbalanced forklift.avif',
     ],
     highlights: [
@@ -92,7 +91,6 @@ const productCategories = [
     description: 'Specialized warehouse equipment including reach trucks, order pickers, and stackers for high-density storage optimization',
     capacityRange: '1.4 - 2.0 tons',
     images: [
-      '/Heli/Electric Storage Series/G2 series 1.6-2 tons battery -mounted reach forklift.avif',
       '/Heli/Electric Storage Series/1.4 tons narrow leg electric stacker truck.avif',
     ],
     highlights: [
@@ -145,7 +143,6 @@ const productCategories = [
     capacityRange: '2.0 tons',
     images: [
       '/Heli/Warehouse Truck/Electric Hand Pallet Truck  2 tons.avif',
-      '/Heli/Warehouse Truck/Heli Electric Pallet Stacker.avif',
     ],
     highlights: [
       'Compact and highly maneuverable',
