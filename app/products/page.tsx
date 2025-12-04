@@ -347,8 +347,8 @@ export default function ProductsPage() {
             <h2 className="text-3xl font-bold text-center mb-8">Complete Material Handling Solutions</h2>
             <div className="prose prose-lg max-w-none text-gray-600 space-y-4">
               <p>
-                As an authorized HELI distributor in the Philippines, we provide access to one of the world's leading 
-                forklift manufacturers. HELI's comprehensive product range ensures we have the perfect solution for 
+                As an authorized HELI distributor in the Philippines, we provide access to one of the world&apos;s leading 
+                forklift manufacturers. HELI&apos;s comprehensive product range ensures we have the perfect solution for 
                 every material handling challenge, from light-duty warehouse operations to heavy industrial applications.
               </p>
               <p>

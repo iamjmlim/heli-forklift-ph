@@ -28,13 +28,13 @@ export default function AboutPage() {
             <div className="prose prose-lg max-w-none text-gray-600 space-y-4">
               <p>
                 Heli Forklift Philippines has been a leading authorized distributor of HELI material handling equipment 
-                in the Philippines for over 15 years. As a trusted partner of HELI - one of the world's largest forklift 
+                in the Philippines for over 15 years. As a trusted partner of HELI - one of the world&apos;s largest forklift 
                 manufacturers - we specialize in delivering high-quality forklifts, reach trucks, warehouse equipment, 
                 and comprehensive service solutions to businesses across various industries.
               </p>
               <p>
                 Our partnership with HELI gives us access to cutting-edge technology and a comprehensive product range 
-                that spans from compact warehouse trucks to heavy-duty industrial forklifts. HELI's 35+ years of manufacturing 
+                that spans from compact warehouse trucks to heavy-duty industrial forklifts. HELI&apos;s 35+ years of manufacturing 
                 excellence combined with our local expertise ensures that our clients receive world-class equipment backed 
                 by exceptional service and support.
               </p>
@@ -47,7 +47,7 @@ export default function AboutPage() {
               <p>
                 With a team of factory-trained professionals and a comprehensive service network, we ensure that your 
                 operations run smoothly and efficiently. From initial consultation and equipment selection to installation, 
-                training, and ongoing after-sales support, we're with you every step of the way.
+                training, and ongoing after-sales support, we&apos;re with you every step of the way.
               </p>
             </div>
           </div>
@@ -69,7 +69,7 @@ export default function AboutPage() {
                     To provide innovative, reliable, and cost-effective material handling solutions through 
                     world-class HELI equipment that enhance operational efficiency and safety for businesses 
                     across the Philippines. We strive to exceed customer expectations through quality products, 
-                    factory-trained expertise, and exceptional service backed by HELI's global manufacturing excellence.
+                    factory-trained expertise, and exceptional service backed by HELI&apos;s global manufacturing excellence.
                   </p>
                 </CardContent>
               </Card>
@@ -115,7 +115,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="font-semibold mb-2">Customer Focus</h3>
                 <p className="text-gray-600 text-sm">
-                  Our customers' success is our success
+                  Our customers&apos; success is our success
                 </p>
               </div>
 
@@ -175,9 +175,9 @@ export default function AboutPage() {
                     Authorized HELI Distributor
                   </h3>
                   <p className="text-gray-700 max-w-2xl mx-auto">
-                    As an authorized distributor of HELI - one of the world's top forklift manufacturers with 35+ years 
+                    As an authorized distributor of HELI - one of the world&apos;s top forklift manufacturers with 35+ years 
                     of excellence - we bring you access to over 200 product models, genuine parts, factory-trained 
-                    technicians, and comprehensive warranty coverage. HELI's global reputation for quality and innovation 
+                    technicians, and comprehensive warranty coverage. HELI&apos;s global reputation for quality and innovation 
                     is your guarantee of reliable material handling solutions.
                   </p>
                 </CardContent>
@@ -192,7 +192,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-4">
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p className="text-xl mb-8 opacity-90">
               Discover how we can help optimize your material handling operations

@@ -53,7 +53,7 @@ export default function HomePage() {
             HELI Forklift Product Range
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            Comprehensive material handling solutions from one of the world's leading forklift manufacturers
+            Comprehensive material handling solutions from one of the world&apos;s leading forklift manufacturers
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="hover:shadow-lg transition-shadow">

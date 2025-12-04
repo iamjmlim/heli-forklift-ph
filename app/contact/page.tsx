@@ -41,7 +41,7 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="text-xl text-gray-600">
-              Get in touch with us today. We're here to help with all your material handling needs.
+              Get in touch with us today. We&apos;re here to help with all your material handling needs.
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="text-2xl">Send Us a Message</CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you as soon as possible
+                  Fill out the form below and we&apos;ll get back to you as soon as possible
                 </CardDescription>
               </CardHeader>
               <CardContent>
