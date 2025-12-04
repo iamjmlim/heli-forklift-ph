@@ -13,9 +13,9 @@ const productCategories = [
     description: 'Advanced eco-friendly electric forklifts powered by cutting-edge lithium-ion technology for superior performance and efficiency',
     capacityRange: '1.0 - 10.0 tons',
     images: [
-      '/Heli/Lithium Batter Forklift/H3 series 1-2.5 tons lithium battery counterbalanced forklift.avif',
-      '/Heli/Lithium Batter Forklift/G2 series 1.5-3.8 tons lithium battery counterbalanced forklift.avif',
-      '/Heli/Lithium Batter Forklift/G3 series 4-5 tons lithium battery counterbalanced forklift.avif',
+      '/Heli/Lithium Battery Forklift/H3 series 1-2.5 tons lithium battery counterbalanced forklift.avif',
+      '/Heli/Lithium Battery Forklift/G2 series 1.5-3.8 tons lithium battery counterbalanced forklift.avif',
+      '/Heli/Lithium Battery Forklift/G3 series 4-5 tons lithium battery counterbalanced forklift.avif',
     ],
     highlights: [
       'Zero emissions for indoor operations',
