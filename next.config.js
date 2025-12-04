@@ -5,7 +5,8 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: process.env.NODE_ENV === 'production' ? '/heli-forklift-ph' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/heli-forklift-ph/' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/heli-forklift-ph' : '',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
