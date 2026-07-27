@@ -2,8 +2,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Truck, Wrench, Users, Shield, ArrowRight, Battery, PackageOpen, Boxes } from 'lucide-react'
+import { Truck, Wrench, Users, Shield, ArrowRight, Battery, PackageOpen, Boxes, CalendarDays } from 'lucide-react'
 import { getAssetPath } from '@/lib/paths'
+
+const eventPreviews = [
+  { src: '/Events/Bocaue display/IMG_0565.JPG', label: 'Bocaue Client Display' },
+  { src: '/Events/Bocaue display/IMG_1457.JPG', label: 'Bocaue Client Display' },
+  { src: '/Events/malaysia exhibit/Image_20260523104627_3590_8.jpg', label: 'Malaysia Exhibit' },
+  { src: '/Events/malaysia exhibit/Image_20260523105513_3610_8.jpg', label: 'Malaysia Exhibit' },
+]
 
 export default function HomePage() {
   return (
@@ -208,6 +215,49 @@ export default function HomePage() {
                 <div className="text-4xl font-bold text-orange-500 mb-2">24/7</div>
                 <p className="text-gray-600">Support Available</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Events Preview Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <CalendarDays className="h-6 w-6 text-orange-500" />
+                  <span className="text-sm font-semibold text-orange-500 uppercase tracking-wide">Events & Exhibits</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">See Us in Action</h2>
+                <p className="text-gray-600 mt-2">From client demos to international trade shows — HELI equipment up close</p>
+              </div>
+              <Link href="/events">
+                <Button variant="outline" className="shrink-0">
+                  View All Events
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {eventPreviews.map((event, i) => (
+                <Link key={i} href="/events" className="group">
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md group-hover:shadow-xl transition-shadow">
+                    <Image
+                      src={getAssetPath(event.src)}
+                      alt={event.label}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute bottom-2 left-2 right-2 text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                      {event.label}
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
