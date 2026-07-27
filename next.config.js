@@ -1,15 +1,14 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production'
+const isGithubPages = process.env.GITHUB_PAGES === 'true'
 
 const nextConfig = {
-  output: 'export',
+  output: isGithubPages ? 'export' : undefined,
   images: {
-    unoptimized: true,
+    unoptimized: isGithubPages,
   },
-  basePath: isProd ? '/heli-forklift-ph' : '',
-  assetPrefix: isProd ? '/heli-forklift-ph' : '',
-  trailingSlash: true,
+  basePath: isGithubPages ? '/heli-forklift-ph' : '',
+  assetPrefix: isGithubPages ? '/heli-forklift-ph' : '',
+  trailingSlash: isGithubPages,
 }
 
 module.exports = nextConfig
-

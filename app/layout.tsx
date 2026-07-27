@@ -6,7 +6,7 @@ import { Footer } from '@/components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const siteUrl = 'https://iamjmlim.github.io/heli-forklift-ph'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://iamjmlim.github.io/heli-forklift-ph'
 
 const ogImage = {
   url: `${siteUrl}/og-image.jpg`,
