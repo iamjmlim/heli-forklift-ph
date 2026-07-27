@@ -4,13 +4,16 @@ import { Target, Eye, Award, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
+const ogImage = 'https://iamjmlim.github.io/heli-forklift-ph/og-image.jpg'
+
 export const metadata: Metadata = {
   title: 'About Us',
   description: 'Learn about Heli Forklift Philippines — an authorized HELI distributor with 15+ years of experience delivering premium material handling equipment and services across the Philippines.',
   openGraph: {
     title: 'About Us | Heli Forklift Philippines',
     description: 'Authorized HELI distributor in the Philippines with 15+ years of experience. 500+ happy clients, 1000+ units deployed, and 24/7 technical support.',
-    url: '/about',
+    url: 'https://iamjmlim.github.io/heli-forklift-ph/about',
+    images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Philippines' }],
   },
 }
 

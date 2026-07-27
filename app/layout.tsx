@@ -8,6 +8,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 const siteUrl = 'https://iamjmlim.github.io/heli-forklift-ph'
 
+const ogImage = {
+  url: `${siteUrl}/og-image.jpg`,
+  width: 600,
+  height: 450,
+  alt: 'HELI Forklift Philippines — Authorized HELI Distributor',
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -51,20 +58,13 @@ export const metadata: Metadata = {
     siteName: 'Heli Forklift Philippines',
     title: 'Heli Forklift Philippines | Authorized HELI Distributor',
     description: 'Authorized HELI forklift distributor in the Philippines. Lithium battery, electric, diesel forklifts, reach trucks, and warehouse equipment with full service support.',
-    images: [
-      {
-        url: '/Heli/Lithium Batter Forklift/IMG_1493.JPG',
-        width: 600,
-        height: 450,
-        alt: 'HELI Lithium Battery Forklifts — Heli Forklift Philippines',
-      },
-    ],
+    images: [ogImage],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Heli Forklift Philippines | Authorized HELI Distributor',
     description: 'Authorized HELI forklift distributor in the Philippines. Electric, diesel, and lithium battery forklifts with full sales and service support.',
-    images: ['/Heli/Lithium Batter Forklift/IMG_1493.JPG'],
+    images: [`${siteUrl}/og-image.jpg`],
   },
 }
 
@@ -73,7 +73,7 @@ const jsonLd = {
   '@type': 'Organization',
   name: 'Heli Forklift Philippines',
   url: siteUrl,
-  logo: `${siteUrl}/Heli/Lithium Batter Forklift/IMG_1493.JPG`,
+  logo: `${siteUrl}/og-image.jpg`,
   description: 'Authorized HELI forklift distributor in the Philippines specializing in lithium battery, electric, and diesel forklifts, reach trucks, warehouse equipment, and wheel loaders.',
   address: {
     '@type': 'PostalAddress',

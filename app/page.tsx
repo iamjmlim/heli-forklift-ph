@@ -6,13 +6,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Truck, Wrench, Users, Shield, ArrowRight, Battery, PackageOpen, Boxes, CalendarDays } from 'lucide-react'
 import { getAssetPath } from '@/lib/paths'
 
+const ogImage = 'https://iamjmlim.github.io/heli-forklift-ph/og-image.jpg'
+
 export const metadata: Metadata = {
   title: 'Authorized HELI Forklift Distributor in the Philippines',
   description: 'Heli Forklift Philippines is an authorized HELI distributor offering lithium battery forklifts, electric forklifts, diesel forklifts, reach trucks, and warehouse equipment with full after-sales support.',
   openGraph: {
     title: 'Heli Forklift Philippines | Authorized HELI Distributor',
     description: 'Authorized HELI distributor in the Philippines. Premium forklifts and material handling equipment with full sales, maintenance, and repair support.',
-    url: '/',
+    url: 'https://iamjmlim.github.io/heli-forklift-ph/',
+    images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Philippines' }],
   },
 }
 

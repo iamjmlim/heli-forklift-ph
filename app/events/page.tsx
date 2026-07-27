@@ -4,13 +4,16 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { getAssetPath } from '@/lib/paths'
 
+const ogImage = 'https://iamjmlim.github.io/heli-forklift-ph/og-image.jpg'
+
 export const metadata: Metadata = {
   title: 'Events & Exhibits',
   description: 'See Heli Forklift Philippines in action — from client equipment displays in Bocaue to international HELI trade exhibitions in Malaysia. Real equipment, real demos.',
   openGraph: {
     title: 'Events & Exhibits | Heli Forklift Philippines',
     description: 'Photo gallery of HELI forklift events and exhibits — Bocaue client display and Malaysia international trade show.',
-    url: '/events',
+    url: 'https://iamjmlim.github.io/heli-forklift-ph/events',
+    images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Events and Exhibits' }],
   },
 }
 

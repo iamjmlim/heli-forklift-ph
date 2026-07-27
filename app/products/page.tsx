@@ -6,13 +6,16 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { getAssetPath } from '@/lib/paths'
 
+const ogImage = 'https://iamjmlim.github.io/heli-forklift-ph/og-image.jpg'
+
 export const metadata: Metadata = {
   title: 'Products — HELI Forklifts & Material Handling Equipment',
   description: 'Browse the full HELI forklift range in the Philippines: lithium battery forklifts, electric forklifts, diesel forklifts, reach trucks, electric storage equipment, heavy forklifts, warehouse trucks, and wheel loaders.',
   openGraph: {
     title: 'HELI Forklift Products | Heli Forklift Philippines',
     description: 'Complete HELI forklift product range — lithium battery, electric, diesel, reach trucks, heavy forklifts, warehouse equipment, and wheel loaders available in the Philippines.',
-    url: '/products',
+    url: 'https://iamjmlim.github.io/heli-forklift-ph/products',
+    images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Products' }],
   },
 }
 

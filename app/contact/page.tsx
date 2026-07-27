@@ -2,13 +2,16 @@ import type { Metadata } from 'next'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ContactForm } from '@/components/contact-form'
 
+const ogImage = 'https://iamjmlim.github.io/heli-forklift-ph/og-image.jpg'
+
 export const metadata: Metadata = {
   title: 'Contact Us',
   description: 'Get in touch with Heli Forklift Philippines. Request a quote, schedule a demo, or inquire about forklift sales, maintenance, and repair services across the Philippines.',
   openGraph: {
     title: 'Contact Us | Heli Forklift Philippines',
     description: 'Get in touch with Heli Forklift Philippines. Request a quote, schedule a demo, or inquire about forklift sales and service.',
-    url: '/contact',
+    url: 'https://iamjmlim.github.io/heli-forklift-ph/contact',
+    images: [{ url: ogImage, width: 600, height: 450, alt: 'Contact Heli Forklift Philippines' }],
   },
 }
 
