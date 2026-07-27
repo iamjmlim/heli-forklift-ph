@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Truck, Wrench, Users, Shield, ArrowRight, Battery, PackageOpen, Boxes, CalendarDays } from 'lucide-react'
 import { getAssetPath } from '@/lib/paths'
 
-const ogImage = 'https://iamjmlim.github.io/heli-forklift-ph/og-image.jpg'
+const ogImage = '/og-image.jpg'
 
 export const metadata: Metadata = {
   title: 'Authorized HELI Forklift Distributor in the Philippines',

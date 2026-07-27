@@ -4,7 +4,7 @@ import { Target, Eye, Award, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
-const ogImage = 'https://iamjmlim.github.io/heli-forklift-ph/og-image.jpg'
+const ogImage = '/og-image.jpg'
 
 export const metadata: Metadata = {
   title: 'About Us',

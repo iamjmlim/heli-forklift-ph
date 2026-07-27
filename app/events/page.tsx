@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { getAssetPath } from '@/lib/paths'
 
-const ogImage = 'https://iamjmlim.github.io/heli-forklift-ph/og-image.jpg'
+const ogImage = '/og-image.jpg'
 
 export const metadata: Metadata = {
   title: 'Events & Exhibits',

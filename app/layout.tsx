@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Heli Forklift Philippines | Authorized HELI Distributor',
     description: 'Authorized HELI forklift distributor in the Philippines. Electric, diesel, and lithium battery forklifts with full sales and service support.',
-    images: [`${siteUrl}/og-image.jpg`],
+    images: ['/og-image.jpg'],
   },
 }
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ContactForm } from '@/components/contact-form'
 
-const ogImage = 'https://iamjmlim.github.io/heli-forklift-ph/og-image.jpg'
+const ogImage = '/og-image.jpg'
 
 export const metadata: Metadata = {
   title: 'Contact Us',

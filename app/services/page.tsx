@@ -4,7 +4,7 @@ import { Wrench, Settings, Truck, Users, ClipboardCheck, Cog } from 'lucide-reac
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
-const ogImage = 'https://iamjmlim.github.io/heli-forklift-ph/og-image.jpg'
+const ogImage = '/og-image.jpg'
 
 export const metadata: Metadata = {
   title: 'Services — Forklift Maintenance, Repair & Training',
