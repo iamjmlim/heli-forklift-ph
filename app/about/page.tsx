@@ -1,7 +1,9 @@
+import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Target, Eye, Award, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { getAssetPath } from '@/lib/paths'
 
 export default function AboutPage() {
   return (
@@ -182,6 +184,70 @@ export default function AboutPage() {
                   </p>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Events & Exhibits Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-4">Events & Exhibits</h2>
+            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+              From local client displays to international trade exhibitions, we bring HELI equipment closer to you
+            </p>
+
+            {/* Bocaue Display */}
+            <div className="mb-14">
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">Bocaue Client Display</h3>
+              <p className="text-gray-500 text-sm mb-6">Live equipment display for client demonstrations in Bocaue, Bulacan</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {[
+                  '/Events/Bocaue display/IMG_0565.JPG',
+                  '/Events/Bocaue display/IMG_1457.JPG',
+                  '/Events/Bocaue display/IMG_0505.JPG',
+                  '/Events/Bocaue display/IMG_0598.JPG',
+                  '/Events/Bocaue display/IMG_0467.JPG',
+                  '/Events/Bocaue display/IMG_0468.JPG',
+                ].map((src, i) => (
+                  <div key={i} className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <Image
+                      src={getAssetPath(src)}
+                      alt={`Bocaue display ${i + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Malaysia Exhibit */}
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">Malaysia International Exhibit</h3>
+              <p className="text-gray-500 text-sm mb-6">HELI equipment on display at an international trade exhibition in Malaysia</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {[
+                  '/Events/malaysia exhibit/Image_20260523104627_3590_8.jpg',
+                  '/Events/malaysia exhibit/Image_20260523105205_3604_8.jpg',
+                  '/Events/malaysia exhibit/Image_20260523105513_3610_8.jpg',
+                  '/Events/malaysia exhibit/Image_20260523111514_3614_8.jpg',
+                  '/Events/malaysia exhibit/Image_20260601101126_294_89.jpg',
+                  '/Events/malaysia exhibit/Image_20260601101131_300_89.jpg',
+                ].map((src, i) => (
+                  <div key={i} className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <Image
+                      src={getAssetPath(src)}
+                      alt={`Malaysia exhibit ${i + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

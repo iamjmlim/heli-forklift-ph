@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Battery, Truck, PackageOpen, Boxes, Forklift, Package, Zap, Factory, Warehouse, TrendingUp } from 'lucide-react'
+import { Battery, Truck, PackageOpen, Boxes, Forklift, Package, Zap, Factory, Warehouse, TrendingUp, Tractor } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { getAssetPath } from '@/lib/paths'
@@ -17,6 +17,12 @@ const productCategories = [
       '/Heli/Lithium Batter Forklift/H3 series 1-2.5 tons lithium battery counterbalanced forklift.avif',
       '/Heli/Lithium Batter Forklift/G2 series 1.5-3.8 tons lithium battery counterbalanced forklift.avif',
       '/Heli/Lithium Batter Forklift/G3 series 4-5 tons lithium battery counterbalanced forklift.avif',
+      '/Heli/Lithium Batter Forklift/IMG_1493.JPG',
+      '/Heli/Lithium Batter Forklift/IMG_1497.JPG',
+      '/Heli/Lithium Batter Forklift/IMG_1524.JPG',
+      '/Heli/Lithium Batter Forklift/IMG_1501.JPG',
+      '/Heli/Lithium Batter Forklift/IMG_1502.JPG',
+      '/Heli/Lithium Batter Forklift/IMG_1500.JPG',
     ],
     highlights: [
       'Zero emissions for indoor operations',
@@ -68,6 +74,10 @@ const productCategories = [
     capacityRange: '6.0 - 10.0 tons',
     images: [
       '/Heli/Internal Combustion Forklift Series/G series 8.5-10 tons diesel counterbalanced forklift.avif',
+      '/Heli/Internal Combustion Forklift Series/IMG_1483.JPG',
+      '/Heli/Internal Combustion Forklift Series/IMG_1479.JPG',
+      '/Heli/Internal Combustion Forklift Series/IMG_1480.JPG',
+      '/Heli/Internal Combustion Forklift Series/IMG_1481.JPG',
     ],
     highlights: [
       'Powerful engine performance for tough jobs',
@@ -93,6 +103,8 @@ const productCategories = [
     capacityRange: '1.4 - 2.0 tons',
     images: [
       '/Heli/Electric Storage Series/1.4 tons narrow leg electric stacker truck.avif',
+      '/Heli/Electric Storage Series/IMG_1534.JPG',
+      '/Heli/Electric Storage Series/IMG_1535.JPG',
     ],
     highlights: [
       'Extended vertical reach (up to 12m)',
@@ -144,6 +156,7 @@ const productCategories = [
     capacityRange: '2.0 tons',
     images: [
       '/Heli/Warehouse Truck/Electric Hand Pallet Truck  2 tons.avif',
+      '/Heli/Warehouse Truck/IMG_1486.JPG',
     ],
     highlights: [
       'Compact and highly maneuverable',
@@ -159,6 +172,33 @@ const productCategories = [
     color: 'text-red-600',
     bgColor: 'bg-red-50',
     borderColor: 'border-l-red-600'
+  },
+  {
+    id: 'wheel-loader',
+    category: 'Wheel Loader Series',
+    icon: Tractor,
+    tagline: 'Power Meets Versatility',
+    description: 'Heavy-duty wheel loaders engineered for construction, earthmoving, and bulk material handling with superior digging force and lifting capacity',
+    capacityRange: '1.0 - 5.0 tons',
+    images: [
+      '/Heli/Wheel Loader/IMG_9478.JPG',
+      '/Heli/Wheel Loader/IMG_9466.JPG',
+      '/Heli/Wheel Loader/IMG_9665.JPG',
+    ],
+    highlights: [
+      'High breakout force and lift capacity',
+      'Durable all-terrain tyres',
+      'Powerful hydraulic system',
+      'Spacious ergonomic cab',
+      'Multiple attachment options',
+      'Fuel-efficient engine',
+      'Designed for outdoor and rough terrain',
+      'Ideal for construction and bulk handling'
+    ],
+    applications: 'Construction Sites, Quarries, Mining, Ports, Agriculture, Road Building, Bulk Material Handling',
+    color: 'text-orange-500',
+    bgColor: 'bg-orange-50',
+    borderColor: 'border-l-orange-500'
   }
 ]
 
