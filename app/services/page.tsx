@@ -1,7 +1,18 @@
+import type { Metadata } from 'next'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Wrench, Settings, Truck, Users, ClipboardCheck, Cog } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Services — Forklift Maintenance, Repair & Training',
+  description: 'Comprehensive forklift services in the Philippines: preventive maintenance, emergency repair, professional installation, operator training, consulting, and equipment customization. 24/7 support available.',
+  openGraph: {
+    title: 'Forklift Services | Heli Forklift Philippines',
+    description: 'Full-service forklift support in the Philippines — maintenance, repair, installation, operator training, and customization. 24/7 availability with fast response times.',
+    url: '/services',
+  },
+}
 
 const services = [
   {

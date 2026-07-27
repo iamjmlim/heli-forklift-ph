@@ -1,9 +1,20 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Battery, Truck, PackageOpen, Boxes, Forklift, Package, Zap, Factory, Warehouse, TrendingUp, Tractor } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { getAssetPath } from '@/lib/paths'
+
+export const metadata: Metadata = {
+  title: 'Products — HELI Forklifts & Material Handling Equipment',
+  description: 'Browse the full HELI forklift range in the Philippines: lithium battery forklifts, electric forklifts, diesel forklifts, reach trucks, electric storage equipment, heavy forklifts, warehouse trucks, and wheel loaders.',
+  openGraph: {
+    title: 'HELI Forklift Products | Heli Forklift Philippines',
+    description: 'Complete HELI forklift product range — lithium battery, electric, diesel, reach trucks, heavy forklifts, warehouse equipment, and wheel loaders available in the Philippines.',
+    url: '/products',
+  },
+}
 
 const productCategories = [
   {

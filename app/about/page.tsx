@@ -1,7 +1,18 @@
+import type { Metadata } from 'next'
 import { Card, CardContent } from '@/components/ui/card'
 import { Target, Eye, Award, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about Heli Forklift Philippines — an authorized HELI distributor with 15+ years of experience delivering premium material handling equipment and services across the Philippines.',
+  openGraph: {
+    title: 'About Us | Heli Forklift Philippines',
+    description: 'Authorized HELI distributor in the Philippines with 15+ years of experience. 500+ happy clients, 1000+ units deployed, and 24/7 technical support.',
+    url: '/about',
+  },
+}
 
 export default function AboutPage() {
   return (

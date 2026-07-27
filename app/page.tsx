@@ -1,9 +1,20 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Truck, Wrench, Users, Shield, ArrowRight, Battery, PackageOpen, Boxes, CalendarDays } from 'lucide-react'
 import { getAssetPath } from '@/lib/paths'
+
+export const metadata: Metadata = {
+  title: 'Authorized HELI Forklift Distributor in the Philippines',
+  description: 'Heli Forklift Philippines is an authorized HELI distributor offering lithium battery forklifts, electric forklifts, diesel forklifts, reach trucks, and warehouse equipment with full after-sales support.',
+  openGraph: {
+    title: 'Heli Forklift Philippines | Authorized HELI Distributor',
+    description: 'Authorized HELI distributor in the Philippines. Premium forklifts and material handling equipment with full sales, maintenance, and repair support.',
+    url: '/',
+  },
+}
 
 const eventPreviews = [
   { src: '/Events/Bocaue display/IMG_0565.JPG', label: 'Bocaue Client Display' },
