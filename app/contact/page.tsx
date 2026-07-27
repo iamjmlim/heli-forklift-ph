@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact Us | Heli Forklift Philippines',
     description: 'Get in touch with Heli Forklift Philippines. Request a quote, schedule a demo, or inquire about forklift sales and service.',
-    url: 'https://iamjmlim.github.io/heli-forklift-ph/contact',
+    url: '/contact',
     images: [{ url: ogImage, width: 600, height: 450, alt: 'Contact Heli Forklift Philippines' }],
   },
 }

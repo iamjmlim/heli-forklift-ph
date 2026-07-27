@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Heli Forklift Philippines | Authorized HELI Distributor',
     description: 'Authorized HELI distributor in the Philippines. Premium forklifts and material handling equipment with full sales, maintenance, and repair support.',
-    url: 'https://iamjmlim.github.io/heli-forklift-ph/',
+    url: '/',
     images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Philippines' }],
   },
 }

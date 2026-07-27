@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Forklift Services | Heli Forklift Philippines',
     description: 'Full-service forklift support in the Philippines — maintenance, repair, installation, operator training, and customization. 24/7 availability with fast response times.',
-    url: 'https://iamjmlim.github.io/heli-forklift-ph/services',
+    url: '/services',
     images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Services Philippines' }],
   },
 }

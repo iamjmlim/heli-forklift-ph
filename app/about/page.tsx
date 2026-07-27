@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Us | Heli Forklift Philippines',
     description: 'Authorized HELI distributor in the Philippines with 15+ years of experience. 500+ happy clients, 1000+ units deployed, and 24/7 technical support.',
-    url: 'https://iamjmlim.github.io/heli-forklift-ph/about',
+    url: '/about',
     images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Philippines' }],
   },
 }

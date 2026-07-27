@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'HELI Forklift Products | Heli Forklift Philippines',
     description: 'Complete HELI forklift product range — lithium battery, electric, diesel, reach trucks, heavy forklifts, warehouse equipment, and wheel loaders available in the Philippines.',
-    url: 'https://iamjmlim.github.io/heli-forklift-ph/products',
+    url: '/products',
     images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Products' }],
   },
 }
