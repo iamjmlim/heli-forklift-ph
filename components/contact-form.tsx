@@ -67,11 +67,14 @@ export function ContactForm() {
       if (data.success) {
         setStatus('success')
         setFormData(EMPTY_FORM)
+        setTimeout(() => setStatus('idle'), 5000)
       } else {
         setStatus('error')
+        setTimeout(() => setStatus('idle'), 5000)
       }
     } catch {
       setStatus('error')
+      setTimeout(() => setStatus('idle'), 5000)
     }
   }
 
@@ -115,7 +118,7 @@ export function ContactForm() {
               type="submit"
               size="lg"
               className="w-full"
-              disabled={status === 'loading' || status === 'success'}
+              disabled={status === 'loading'}
             >
               {status === 'loading' ? 'Sending…' : 'Send Message'}
             </Button>

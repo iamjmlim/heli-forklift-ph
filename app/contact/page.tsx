@@ -102,7 +102,7 @@ export default function ContactPage() {
           </div>
           <div className="w-full overflow-hidden border border-gray-100" style={{ height: '420px' }}>
             <iframe
-              src="https://maps.google.com/maps?q=Km.+60+Plaridel+Bypass+Road+Brgy.+Cutcut+Guiguinto+Bulacan+Philippines&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=14.8330,120.8692&z=17&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -113,7 +113,7 @@ export default function ContactPage() {
             />
           </div>
           <a
-            href="https://maps.google.com/maps?q=Km.+60+Plaridel+Bypass+Road+Brgy.+Cutcut+Guiguinto+Bulacan+Philippines"
+            href="https://maps.google.com/maps?q=14.8330,120.8692"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-[#E60012] text-sm font-semibold mt-3 hover:underline"
