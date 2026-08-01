@@ -91,6 +91,37 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Google Map */}
+      <section className="bg-white">
+        <div className="container mx-auto px-6 md:px-10 pb-16">
+          <div className="mb-6">
+            <p className="text-[#E60012] text-xs font-bold tracking-[0.3em] uppercase mb-2">Find Us</p>
+            <h2 className="text-2xl font-bold text-gray-900">Our Location</h2>
+            <p className="text-gray-500 text-sm mt-1">Km. 60 Plaridel Bypass Road, Brgy. Cutcut, Guiguinto, Bulacan</p>
+          </div>
+          <div className="w-full overflow-hidden border border-gray-100" style={{ height: '420px' }}>
+            <iframe
+              src="https://maps.google.com/maps?q=Km.+60+Plaridel+Bypass+Road+Brgy.+Cutcut+Guiguinto+Bulacan+Philippines&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Heli Forklift Philippines — Guiguinto, Bulacan"
+            />
+          </div>
+          <a
+            href="https://maps.google.com/maps?q=Km.+60+Plaridel+Bypass+Road+Brgy.+Cutcut+Guiguinto+Bulacan+Philippines"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-[#E60012] text-sm font-semibold mt-3 hover:underline"
+          >
+            Open in Google Maps →
+          </a>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-16 bg-[#F7F7F7]">
         <div className="container mx-auto px-4">
