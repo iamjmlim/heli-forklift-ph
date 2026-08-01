@@ -6,13 +6,21 @@ import { getAssetPath } from '@/lib/paths'
 const ogImage = '/og-image.jpg'
 
 export const metadata: Metadata = {
-  title: 'Events & Exhibits',
-  description: 'See Heli Forklift Philippines in action — from client equipment displays in Bocaue to international HELI trade exhibitions in Malaysia. Real equipment, real demos.',
+  title: 'Events & Exhibits — HELI Forklift Philippines',
+  description: 'See HELI forklifts in action at Heli Forklift Philippines events — live client equipment displays in Bulacan, international trade exhibitions, and on-site product demonstrations across the Philippines.',
+  keywords: [
+    'HELI forklift demo Philippines',
+    'forklift exhibit Philippines',
+    'forklift display Bulacan',
+    'HELI forklift event Philippines',
+    'forklift trade show Philippines',
+    'forklift demonstration Philippines',
+  ],
   openGraph: {
-    title: 'Events & Exhibits | Heli Forklift Philippines',
-    description: 'Photo gallery of HELI forklift events and exhibits — Bocaue client display and Malaysia international trade show.',
+    title: 'HELI Forklift Events & Exhibits in the Philippines',
+    description: 'Live equipment displays, client demonstrations, and international trade exhibitions from Heli Forklift Philippines — your authorized HELI dealer in Bulacan.',
     url: '/events',
-    images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Events and Exhibits' }],
+    images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Events Philippines' }],
   },
 }
 

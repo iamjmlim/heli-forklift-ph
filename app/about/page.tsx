@@ -5,13 +5,21 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn about Heli Forklift Philippines — an authorized HELI sales agent with 15+ years of experience delivering premium material handling equipment and services across the Philippines.',
+  title: 'About Us — Authorized HELI Forklift Dealer in the Philippines',
+  description: 'Heli Forklift Philippines is an authorized HELI sales agent based in Guiguinto, Bulacan. We deliver premium forklifts and material handling equipment with full sales, installation, and after-sales service across the Philippines.',
+  keywords: [
+    'HELI forklift authorized dealer Philippines',
+    'forklift company Bulacan',
+    'forklift dealer Guiguinto',
+    'material handling company Philippines',
+    'HELI forklift agent Philippines',
+    'forklift distributor Bulacan',
+  ],
   openGraph: {
-    title: 'About Us | Heli Forklift Philippines',
-    description: 'Authorized HELI sales agent in the Philippines with 15+ years of experience. 500+ happy clients, 1000+ units deployed, and 24/7 technical support.',
+    title: 'About Heli Forklift Philippines | Authorized HELI Dealer',
+    description: 'Authorized HELI sales agent in Guiguinto, Bulacan. Supplying premium forklifts and material handling equipment across the Philippines with full local after-sales support.',
     url: '/about',
-    images: [{ url: '/og-image.jpg', width: 600, height: 450, alt: 'HELI Forklift Philippines' }],
+    images: [{ url: '/og-image.jpg', width: 600, height: 450, alt: 'About Heli Forklift Philippines' }],
   },
 }
 

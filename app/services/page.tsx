@@ -6,11 +6,23 @@ import Link from 'next/link'
 const ogImage = '/og-image.jpg'
 
 export const metadata: Metadata = {
-  title: 'Services — Forklift Maintenance, Repair & Training',
-  description: 'Comprehensive forklift services in the Philippines: preventive maintenance, emergency repair, professional installation, operator training, consulting, and equipment customization. 24/7 support available.',
+  title: 'Services — Forklift Maintenance, Repair & Training in the Philippines',
+  description: 'Complete forklift after-sales services in the Philippines from our Bulacan base: preventive maintenance, emergency repair, professional installation, operator training, and equipment customization for HELI forklifts.',
+  keywords: [
+    'forklift maintenance Philippines',
+    'forklift repair Philippines',
+    'forklift service Bulacan',
+    'HELI forklift maintenance',
+    'forklift operator training Philippines',
+    'forklift parts Philippines',
+    'forklift installation Philippines',
+    'forklift after-sales Philippines',
+    'preventive maintenance forklift Philippines',
+    'forklift technician Philippines',
+  ],
   openGraph: {
-    title: 'Forklift Services | Heli Forklift Philippines',
-    description: 'Full-service forklift support in the Philippines — maintenance, repair, installation, operator training, and customization. 24/7 availability with fast response times.',
+    title: 'Forklift Maintenance, Repair & Service in the Philippines',
+    description: 'Full after-sales support for HELI forklifts in the Philippines — preventive maintenance, emergency repairs, installation, and certified operator training. Based in Guiguinto, Bulacan.',
     url: '/services',
     images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Services Philippines' }],
   },

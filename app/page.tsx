@@ -8,13 +8,13 @@ import { StatsSection } from '@/components/stats-section'
 import { VideoCard } from '@/components/video-card'
 
 export const metadata: Metadata = {
-  title: 'Authorized HELI Forklift Distributor in the Philippines',
-  description: 'Heli Forklift Philippines is an authorized HELI sales agent offering lithium battery forklifts, electric forklifts, diesel forklifts, reach trucks, and warehouse equipment with full after-sales support.',
+  title: 'HELI Forklift Philippines | Authorized Dealer in Bulacan',
+  description: 'Authorized HELI forklift dealer in Guiguinto, Bulacan. Buy lithium battery, electric, and diesel forklifts, reach trucks, and warehouse equipment with full sales and after-sales support across the Philippines.',
   openGraph: {
-    title: 'Heli Forklift Philippines | Authorized HELI Distributor',
-    description: 'Authorized HELI distributor in the Philippines. Premium forklifts and material handling equipment with full sales, maintenance, and repair support.',
+    title: 'HELI Forklift Philippines | Authorized Dealer — Bulacan',
+    description: 'Buy genuine HELI forklifts in the Philippines from our Guiguinto, Bulacan branch. Lithium battery, electric & diesel forklifts, reach trucks, and full after-sales service. Call +63 991 113 4556.',
     url: '/',
-    images: [{ url: '/og-image.jpg', width: 600, height: 450, alt: 'HELI Forklift Philippines' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'HELI Forklift Philippines — Authorized Dealer in Bulacan' }],
   },
 }
 

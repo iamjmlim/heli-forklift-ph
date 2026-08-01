@@ -5,19 +5,71 @@ import { ContactForm } from '@/components/contact-form'
 const ogImage = '/og-image.jpg'
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Get in touch with Heli Forklift Philippines. Request a quote, schedule a demo, or inquire about forklift sales, maintenance, and repair services across the Philippines.',
+  title: 'Contact Us — Heli Forklift Philippines, Guiguinto Bulacan',
+  description: 'Contact Heli Forklift Philippines at Km. 60 Plaridel Bypass Road, Guiguinto, Bulacan. Call +63 991 113 4556 or email agaropher111@gmail.com. Open Monday–Sunday, 8:30AM–5:30PM.',
+  keywords: [
+    'contact forklift dealer Philippines',
+    'forklift supplier Bulacan contact',
+    'HELI forklift Philippines contact',
+    'forklift quote Philippines',
+    'buy forklift Bulacan',
+    'forklift dealer Guiguinto Bulacan',
+    'HELI forklift phone number Philippines',
+  ],
   openGraph: {
-    title: 'Contact Us | Heli Forklift Philippines',
-    description: 'Get in touch with Heli Forklift Philippines. Request a quote, schedule a demo, or inquire about forklift sales and service.',
+    title: 'Contact Heli Forklift Philippines | Guiguinto, Bulacan',
+    description: 'Reach us at Km. 60 Plaridel Bypass Road, Guiguinto, Bulacan — call +63 991 113 4556 or message us on Messenger, Viber, or WeChat. Open daily 8:30AM–5:30PM.',
     url: '/contact',
     images: [{ url: ogImage, width: 600, height: 450, alt: 'Contact Heli Forklift Philippines' }],
   },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What areas in the Philippines do you serve?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We serve clients throughout the Philippines from our main branch in Guiguinto, Bulacan, with a strong focus on Metro Manila, Central Luzon, and surrounding regions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer financing options for HELI forklifts?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, we offer flexible financing options to suit your budget. Contact our sales team at +63 991 113 4556 to discuss available payment plans and financing solutions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What warranty do HELI forklifts come with?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'All HELI equipment comes with manufacturer warranties. Extended warranty options are also available. Specific warranty terms vary by product — contact us for detailed information.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where is your showroom or branch located?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Our main branch is located at Km. 60 Plaridel Bypass Road, Brgy. Cutcut, Guiguinto, Bulacan, Philippines. We are open Monday to Sunday, 8:30AM to 5:30PM.',
+      },
+    },
+  ],
+}
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero */}
       <section className="bg-[#0C1019] py-20">
         <div className="container mx-auto px-4">

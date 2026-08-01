@@ -8,13 +8,27 @@ import { getAssetPath } from '@/lib/paths'
 const ogImage = '/og-image.jpg'
 
 export const metadata: Metadata = {
-  title: 'Products — HELI Forklifts & Material Handling Equipment',
-  description: 'Browse the full HELI forklift range in the Philippines: lithium battery forklifts, electric forklifts, diesel forklifts, reach trucks, electric storage equipment, heavy forklifts, warehouse trucks, and wheel loaders.',
+  title: 'Products — HELI Forklifts & Material Handling Equipment Philippines',
+  description: 'Browse the complete HELI forklift lineup available in the Philippines: lithium battery forklifts, electric forklifts, diesel forklifts, reach trucks, heavy forklifts, warehouse trucks, and wheel loaders. Buy direct from authorized dealer in Bulacan.',
+  keywords: [
+    'HELI forklift price Philippines',
+    'forklift for sale Philippines',
+    'lithium forklift Philippines',
+    'electric forklift price Philippines',
+    'diesel forklift Philippines',
+    'reach truck Philippines',
+    'heavy forklift Philippines',
+    'warehouse truck Philippines',
+    'wheel loader Philippines',
+    'HELI forklift models Philippines',
+    'buy forklift Philippines',
+    'forklift Bulacan',
+  ],
   openGraph: {
-    title: 'HELI Forklift Products | Heli Forklift Philippines',
-    description: 'Complete HELI forklift product range — lithium battery, electric, diesel, reach trucks, heavy forklifts, warehouse equipment, and wheel loaders available in the Philippines.',
+    title: 'HELI Forklift Products for Sale in the Philippines',
+    description: 'Lithium battery, electric, diesel forklifts, reach trucks, and warehouse equipment — complete HELI lineup available from authorized dealer in Guiguinto, Bulacan.',
     url: '/products',
-    images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Products' }],
+    images: [{ url: ogImage, width: 600, height: 450, alt: 'HELI Forklift Products Philippines' }],
   },
 }
 
