@@ -1,86 +1,101 @@
 import Link from 'next/link'
-import { Facebook, Mail, MessageCircle } from 'lucide-react'
+import { Mail } from 'lucide-react'
+
+const quickLinks = [
+  ['/', 'Home'],
+  ['/about', 'About Us'],
+  ['/products', 'Products'],
+  ['/services', 'Services'],
+  ['/events', 'Events'],
+  ['/contact', 'Contact'],
+] as const
+
+const productLinks = [
+  'Lithium Battery Forklift',
+  'Electric Forklift',
+  'Internal Combustion Forklift',
+  'Electric Storage Series',
+  'Warehouse Truck',
+  'Wheel Loader',
+] as const
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent mb-4">
-              HELI FORKLIFT PH
-            </h3>
-            <p className="text-gray-400 mb-4">
-              Leading supplier of industrial material handling equipment in the Philippines. 
-              We provide quality forklifts, reach trucks, scissor lifts, and comprehensive services.
+    <footer className="bg-[#001A47] text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <div className="mb-5" style={{ fontFamily: 'var(--font-barlow), sans-serif' }}>
+              <span className="text-white font-bold text-2xl tracking-wide">HELI</span>
+              <span className="text-blue-300 text-sm ml-2.5 font-medium tracking-[0.15em] uppercase">
+                Forklift Philippines
+              </span>
+            </div>
+            <p className="text-blue-200 text-sm leading-relaxed max-w-sm mb-6">
+              Authorized HELI sales agent in the Philippines. We supply premium material handling equipment with full local sales, installation, and after-sales support.
             </p>
+            <a
+              href="mailto:info@heliforklift.ph"
+              className="inline-flex items-center gap-2 text-sm text-blue-300 hover:text-white transition-colors"
+            >
+              <Mail className="h-4 w-4 flex-shrink-0" />
+              info@heliforklift.ph
+            </a>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-gray-400 hover:text-orange-500 transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-orange-500 transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-gray-400 hover:text-orange-500 transition-colors">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-400 hover:text-orange-500 transition-colors">
-                  Services
-                </Link>
-              </li>
+            <h4 className="text-white text-xs font-semibold uppercase tracking-[0.15em] mb-5">
+              Navigation
+            </h4>
+            <ul className="space-y-3">
+              {quickLinks.map(([href, label]) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-blue-200 hover:text-white text-sm transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Products */}
           <div>
-            <h4 className="font-semibold mb-4">Contact Us</h4>
+            <h4 className="text-white text-xs font-semibold uppercase tracking-[0.15em] mb-5">
+              Products
+            </h4>
             <ul className="space-y-3">
-              <li className="flex items-center space-x-2">
-                <Facebook className="h-5 w-5 text-orange-500" />
-                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                  Facebook
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <MessageCircle className="h-5 w-5 text-orange-500" />
-                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                  Viber
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <MessageCircle className="h-5 w-5 text-orange-500" />
-                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                  WeChat
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Mail className="h-5 w-5 text-orange-500" />
-                <a href="mailto:info@heliforklift.ph" className="text-gray-400 hover:text-orange-500 transition-colors">
-                  Email
-                </a>
-              </li>
+              {productLinks.map((product) => (
+                <li key={product}>
+                  <Link
+                    href="/products"
+                    className="text-blue-200 hover:text-white text-sm transition-colors"
+                  >
+                    {product}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Heli Forklift Philippines. All rights reserved.</p>
+      {/* Bottom bar */}
+      <div className="border-t border-[#002E7D]">
+        <div className="container mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="text-blue-400 text-xs">
+            &copy; {new Date().getFullYear()} Heli Forklift Philippines. All rights reserved.
+          </p>
+          <p className="text-blue-500 text-xs">
+            Authorized HELI Sales Agent
+          </p>
         </div>
       </div>
     </footer>
   )
 }
-

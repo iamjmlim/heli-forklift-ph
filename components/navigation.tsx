@@ -12,78 +12,101 @@ const navItems = [
   { href: '/products', label: 'Products' },
   { href: '/services', label: 'Services' },
   { href: '/events', label: 'Events' },
-  { href: '/contact', label: 'Contact Us' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export function Navigation() {
   const pathname = usePathname()
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex items-center justify-between h-16">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
-              HELI FORKLIFT PH
-            </div>
+          <Link href="/" className="flex flex-col leading-none select-none" onClick={() => setOpen(false)}>
+            <span className="text-[#0052B4] font-bold text-xl tracking-wide" style={{ fontFamily: 'var(--font-barlow), sans-serif' }}>
+              HELI
+            </span>
+            <span className="text-gray-500 text-[10px] font-medium tracking-[0.18em] uppercase">
+              Forklift Philippines
+            </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  'text-sm font-medium transition-colors hover:text-orange-500',
-                  pathname === item.href
-                    ? 'text-orange-500'
-                    : 'text-gray-700'
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-0.5">
+            {navItems.map(({ href, label }) => {
+              const active = pathname === href
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className={cn(
+                    'relative px-4 py-5 text-sm font-medium transition-colors duration-150',
+                    active ? 'text-[#0052B4]' : 'text-gray-600 hover:text-[#0052B4]'
+                  )}
+                >
+                  {label}
+                  {active && (
+                    <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-[#0052B4] rounded-full" />
+                  )}
+                </Link>
+              )
+            })}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+          {/* CTA + mobile toggle */}
+          <div className="flex items-center gap-3">
+            <Link
+              href="/contact"
+              className="hidden md:inline-flex items-center bg-[#0052B4] hover:bg-[#003D8A] text-white text-sm font-semibold px-5 py-2 rounded-sm transition-colors duration-150"
+            >
+              Get a Quote
+            </Link>
+            <button
+              className="md:hidden p-2 text-gray-600 hover:text-[#0052B4] transition-colors"
+              onClick={() => setOpen(!open)}
+              aria-label="Toggle menu"
+            >
+              {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  'block py-2 text-sm font-medium transition-colors hover:text-orange-500',
-                  pathname === item.href
-                    ? 'text-orange-500'
-                    : 'text-gray-700'
-                )}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+      {/* Mobile menu — slide down */}
+      <div
+        className={cn(
+          'md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-out bg-white border-t border-gray-100',
+          open ? 'max-h-[28rem] opacity-100' : 'max-h-0 opacity-0'
         )}
+      >
+        <div className="container mx-auto px-4 pb-5 pt-2 flex flex-col">
+          {navItems.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={cn(
+                'py-3 px-2 text-sm font-medium border-b border-gray-50 last:border-0 transition-colors',
+                pathname === href
+                  ? 'text-[#0052B4]'
+                  : 'text-gray-700 hover:text-[#0052B4]'
+              )}
+              onClick={() => setOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            className="mt-4 bg-[#0052B4] hover:bg-[#003D8A] text-white text-sm font-semibold px-4 py-3 rounded-sm text-center transition-colors duration-150"
+            onClick={() => setOpen(false)}
+          >
+            Get a Quote
+          </Link>
+        </div>
       </div>
     </nav>
   )
 }
-

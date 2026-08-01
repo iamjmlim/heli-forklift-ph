@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Battery, Truck, PackageOpen, Boxes, Forklift, Package, Zap, Factory, Warehouse, TrendingUp, Tractor } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { getAssetPath } from '@/lib/paths'
 
@@ -50,8 +49,8 @@ const productCategories = [
     ],
     applications: 'Warehouses, Distribution Centers, Cold Storage, Manufacturing Facilities, Retail Operations',
     color: 'text-orange-500',
-    bgColor: 'bg-orange-50',
-    borderColor: 'border-l-orange-500'
+    bgColor: 'bg-[#F0F6FF]',
+    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'electric-forklift',
@@ -76,8 +75,8 @@ const productCategories = [
     ],
     applications: 'Warehouses, Food & Beverage, Pharmaceuticals, Electronics, Indoor Logistics',
     color: 'text-red-600',
-    bgColor: 'bg-red-50',
-    borderColor: 'border-l-red-600'
+    bgColor: 'bg-[#F0F6FF]',
+    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'internal-combustion',
@@ -105,8 +104,8 @@ const productCategories = [
     ],
     applications: 'Construction Sites, Lumber Yards, Shipping Yards, Heavy Manufacturing, Outdoor Storage',
     color: 'text-orange-500',
-    bgColor: 'bg-orange-50',
-    borderColor: 'border-l-orange-500'
+    bgColor: 'bg-[#F0F6FF]',
+    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'electric-storage',
@@ -132,8 +131,8 @@ const productCategories = [
     ],
     applications: 'High-Bay Warehouses, Distribution Centers, Narrow Aisle Storage, Cold Storage Facilities',
     color: 'text-red-600',
-    bgColor: 'bg-red-50',
-    borderColor: 'border-l-red-600'
+    bgColor: 'bg-[#F0F6FF]',
+    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'heavy-forklift',
@@ -158,8 +157,8 @@ const productCategories = [
     ],
     applications: 'Steel Mills, Heavy Manufacturing, Mining Operations, Port Operations, Container Handling',
     color: 'text-orange-500',
-    bgColor: 'bg-orange-50',
-    borderColor: 'border-l-orange-500'
+    bgColor: 'bg-[#F0F6FF]',
+    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'warehouse-truck',
@@ -184,8 +183,8 @@ const productCategories = [
     ],
     applications: 'Retail Stores, Small Warehouses, Loading Docks, Manufacturing Floors, Distribution',
     color: 'text-red-600',
-    bgColor: 'bg-red-50',
-    borderColor: 'border-l-red-600'
+    bgColor: 'bg-[#F0F6FF]',
+    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'wheel-loader',
@@ -211,8 +210,8 @@ const productCategories = [
     ],
     applications: 'Construction Sites, Quarries, Mining, Ports, Agriculture, Road Building, Bulk Material Handling',
     color: 'text-orange-500',
-    bgColor: 'bg-orange-50',
-    borderColor: 'border-l-orange-500'
+    bgColor: 'bg-[#F0F6FF]',
+    borderColor: 'border-l-[#0052B4]'
   }
 ]
 
@@ -220,18 +219,17 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-50 via-white to-red-50 py-16">
+      <section className="bg-gradient-to-r from-[#001A47] to-[#002E7D] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               HELI Forklift Product Range
             </h1>
-            <p className="text-xl text-gray-600 mb-4">
-              Discover exceptional HELI Forklifts where cutting-edge technology meets unparalleled performance
+            <p className="text-xl text-blue-200 mb-3">
+              Cutting-edge technology meets unparalleled performance
             </p>
-            <p className="text-lg text-gray-500">
-              From powerful internal combustion models to efficient electric solutions, HELI offers tailored equipment 
-              designed to enhance productivity and reliability in any industrial setting
+            <p className="text-blue-300 text-base">
+              From powerful internal combustion models to efficient electric solutions — tailored for every industrial application
             </p>
           </div>
         </div>
@@ -251,7 +249,7 @@ export default function ProductsPage() {
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                         <div className="flex-1">
                           <div className="flex items-center gap-4 mb-3">
-                            <div className={`p-3 rounded-lg ${index % 2 === 0 ? 'bg-orange-100' : 'bg-red-100'}`}>
+                            <div className="p-3 rounded-sm bg-[#E8F2FF]">
                               <IconComponent className={`h-8 w-8 ${product.color}`} />
                             </div>
                             <div>
@@ -266,7 +264,7 @@ export default function ProductsPage() {
                           </CardDescription>
                         </div>
                         <div className="text-center md:text-right">
-                          <div className={`inline-block px-4 py-2 rounded-lg ${index % 2 === 0 ? 'bg-orange-100' : 'bg-red-100'}`}>
+                          <div className="inline-block px-4 py-2 rounded-sm bg-[#E8F2FF]">
                             <p className="text-xs text-gray-600 uppercase font-semibold">Capacity Range</p>
                             <p className={`text-lg font-bold ${product.color}`}>{product.capacityRange}</p>
                           </div>
@@ -294,7 +292,7 @@ export default function ProductsPage() {
                       {/* Key Features */}
                       <div className="lg:col-span-2">
                         <h4 className="font-semibold mb-3 text-gray-900 flex items-center gap-2">
-                          <TrendingUp className="h-5 w-5 text-orange-500" />
+                          <TrendingUp className="h-5 w-5 text-[#0052B4]" />
                           Key Features & Benefits
                         </h4>
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -310,16 +308,16 @@ export default function ProductsPage() {
                       {/* Applications */}
                       <div>
                         <h4 className="font-semibold mb-3 text-gray-900 flex items-center gap-2">
-                          <Warehouse className="h-5 w-5 text-red-600" />
+                          <Warehouse className="h-5 w-5 text-[#0052B4]" />
                           Ideal Applications
                         </h4>
                         <p className="text-sm text-gray-600 leading-relaxed mb-4">
                           {product.applications}
                         </p>
                         <Link href="/contact">
-                          <Button variant={index % 2 === 0 ? "default" : "secondary"} className="w-full">
+                          <Link href="/contact" className="block text-center bg-[#0052B4] hover:bg-[#003D8A] text-white font-semibold px-4 py-2.5 rounded-sm transition-colors duration-150 text-sm">
                             Request Quote
-                          </Button>
+                          </Link>
                         </Link>
                       </div>
                     </div>
@@ -332,60 +330,44 @@ export default function ProductsPage() {
       </section>
 
       {/* Why Choose HELI */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#F5F7FB]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Why Choose HELI Forklifts?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="text-center">
-                <CardContent className="pt-6">
-                  <div className="text-3xl font-bold text-orange-500 mb-2">35+</div>
-                  <p className="text-gray-600">Years Manufacturing Experience</p>
-                </CardContent>
-              </Card>
-              <Card className="text-center">
-                <CardContent className="pt-6">
-                  <div className="text-3xl font-bold text-red-600 mb-2">200+</div>
-                  <p className="text-gray-600">Product Models Available</p>
-                </CardContent>
-              </Card>
-              <Card className="text-center">
-                <CardContent className="pt-6">
-                  <div className="text-3xl font-bold text-orange-500 mb-2">100%</div>
-                  <p className="text-gray-600">Quality Assurance</p>
-                </CardContent>
-              </Card>
-              <Card className="text-center">
-                <CardContent className="pt-6">
-                  <div className="text-3xl font-bold text-red-600 mb-2">24/7</div>
-                  <p className="text-gray-600">Service Support</p>
-                </CardContent>
-              </Card>
+            <h2 className="text-3xl font-bold mb-3 text-gray-900">Why Choose HELI Forklifts?</h2>
+            <div className="w-10 h-0.5 bg-[#0052B4] mb-12" />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { value: '35+', label: 'Years Manufacturing Experience' },
+                { value: '200+', label: 'Product Models Available' },
+                { value: '100%', label: 'Quality Assurance' },
+                { value: '24/7', label: 'Service Support' },
+              ].map(({ value, label }) => (
+                <div key={label} className="text-center py-8 px-4 bg-white border border-gray-100 rounded-sm">
+                  <div className="text-3xl font-bold text-[#0052B4] mb-1.5">{value}</div>
+                  <p className="text-sm text-gray-500 leading-snug">{label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-red-600">
+      <section className="py-16 bg-[#0052B4]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-4">
               Find Your Perfect Material Handling Solution
             </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Our team of experts will help you select the right equipment for your specific needs and budget
+            <p className="text-blue-100 text-lg mb-8">
+              Our experts will help you select the right equipment for your specific needs and budget
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                  Request Consultation
-                </Button>
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white text-[#0052B4] hover:bg-blue-50 font-bold px-8 py-4 rounded-sm transition-colors duration-200">
+                Request Consultation
               </Link>
-              <Link href="/services">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent text-white border-white hover:bg-white hover:text-orange-600">
-                  View Our Services
-                </Button>
+              <Link href="/services" className="inline-flex items-center justify-center gap-2 border border-white/50 hover:border-white text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-sm transition-all duration-200">
+                View Our Services
               </Link>
             </div>
           </div>
@@ -414,10 +396,8 @@ export default function ProductsPage() {
               </p>
             </div>
             <div className="mt-8 text-center">
-              <Link href="/about">
-                <Button variant="outline" size="lg">
-                  Learn More About Us
-                </Button>
+              <Link href="/about" className="inline-flex items-center gap-2 border border-[#0052B4] text-[#0052B4] hover:bg-[#0052B4] hover:text-white font-semibold px-8 py-3 rounded-sm transition-colors duration-200">
+                Learn More About Us
               </Link>
             </div>
           </div>

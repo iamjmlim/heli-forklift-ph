@@ -19,13 +19,13 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-50 via-white to-red-50 py-16">
+      <section className="bg-gradient-to-r from-[#001A47] to-[#002E7D] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-blue-200">
               Get in touch with us today. We&apos;re here to help with all your material handling needs.
             </p>
           </div>

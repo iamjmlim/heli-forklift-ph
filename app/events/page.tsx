@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
 import { getAssetPath } from '@/lib/paths'
 
 const ogImage = '/og-image.jpg'
@@ -50,13 +49,13 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-orange-50 via-white to-red-50 py-16">
+      <section className="bg-gradient-to-r from-[#001A47] to-[#002E7D] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Events & Exhibits
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-blue-200">
               From local client displays to international trade exhibitions — see HELI equipment up close
             </p>
           </div>
@@ -71,7 +70,7 @@ export default function EventsPage() {
               <div key={eventIndex}>
                 <div className="mb-8">
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{event.title}</h2>
-                  <p className="text-orange-500 font-medium text-sm mb-3">{event.subtitle}</p>
+                  <p className="text-[#0052B4] font-medium text-sm mb-3">{event.subtitle}</p>
                   <p className="text-gray-600 max-w-2xl">{event.description}</p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -97,17 +96,18 @@ export default function EventsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-red-600">
+      <section className="py-16 bg-[#0052B4]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Interested in a Live Demo?</h2>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-blue-100 text-lg mb-8">
               Contact us to arrange a product demonstration at your facility
             </p>
-            <Link href="/contact">
-              <Button size="lg" variant="secondary">
-                Get in Touch
-              </Button>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white text-[#0052B4] hover:bg-blue-50 font-bold px-8 py-4 rounded-sm transition-colors duration-200"
+            >
+              Get in Touch
             </Link>
           </div>
         </div>

@@ -18,6 +18,13 @@ const config: Config = {
     },
     extend: {
       colors: {
+        heli: {
+          blue: '#0052B4',
+          dark: '#002E7D',
+          navy: '#001A47',
+          light: '#E8F2FF',
+          muted: '#F5F7FB',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
