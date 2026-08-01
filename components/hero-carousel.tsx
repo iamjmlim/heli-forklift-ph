@@ -8,7 +8,7 @@ import { getAssetPath } from '@/lib/paths'
 
 const slides = [
   {
-    image: '/helichina/hero-1.jpg',
+    image: '/helichina/hero-ph-facility.png',
     number: '01',
     letter: 'H',
     heading: 'Industrial Material\nHandling Excellence',
@@ -24,7 +24,7 @@ const slides = [
     cta: { label: 'View Electric Range', href: '/products' },
   },
   {
-    image: '/helichina/hero-ph-facility.png',
+    image: '/helichina/hero-3.jpg',
     number: '03',
     letter: 'L',
     heading: 'Your Authorized\nHELI Partner\nin Philippines',
