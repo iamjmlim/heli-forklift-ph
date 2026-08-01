@@ -145,31 +145,34 @@ export function HeroCarousel() {
         <ChevronRight className="h-5 w-5" />
       </button>
 
-      {/* Dot navigation */}
+      {/* Dot navigation — scaleX instead of width to avoid layout thrash */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => goTo(i)}
             aria-label={`Slide ${i + 1}`}
-            className="transition-all duration-300"
             style={{
-              width: i === current ? '28px' : '8px',
+              width: '28px',
               height: '3px',
-              background: i === current ? '#E60012' : 'rgba(255,255,255,0.35)',
               borderRadius: '2px',
+              background: i === current ? '#E60012' : 'rgba(255,255,255,0.35)',
+              transform: `scaleX(${i === current ? 1 : 0.286})`,
+              transformOrigin: 'left center',
+              transition: 'transform 300ms ease, background 300ms ease',
             }}
           />
         ))}
       </div>
 
-      {/* Progress bar at very bottom */}
+      {/* Progress bar — scaleX instead of width to avoid layout thrash */}
       <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/10 z-20">
         <div
-          className="h-full bg-[#E60012] transition-none"
+          className="h-full w-full bg-[#E60012]"
           style={{
-            width: `${((current + 1) / slides.length) * 100}%`,
-            transition: 'width 5s linear',
+            transformOrigin: 'left center',
+            transform: `scaleX(${(current + 1) / slides.length})`,
+            transition: 'transform 5s linear',
           }}
         />
       </div>
