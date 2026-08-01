@@ -4,6 +4,7 @@ import './globals.css'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { BackToTop } from '@/components/back-to-top'
+import { FloatingChat } from '@/components/floating-chat'
 
 const inter = Inter({ subsets: ['latin'] })
 const roboto = Roboto({
@@ -117,6 +118,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <FloatingChat />
         <BackToTop />
       </body>
     </html>
