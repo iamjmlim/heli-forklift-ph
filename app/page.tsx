@@ -203,7 +203,7 @@ export default function HomePage() {
               </h2>
               <div className="w-10 h-0.5 bg-[#0052B4] mb-6" />
               <p className="text-gray-600 leading-relaxed mb-4">
-                Authorized HELI sales agent in the Philippines — delivering world-class material handling equipment backed by one of the global industry's leading manufacturers, with roots going back to 1958.
+                Authorized HELI sales agent in the Philippines — delivering world-class material handling equipment backed by one of the global industry&apos;s leading manufacturers, with roots going back to 1958.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 We serve businesses across Metro Manila and the wider Philippines with genuine HELI equipment, professional installation, operator training, and dedicated after-sales service.
