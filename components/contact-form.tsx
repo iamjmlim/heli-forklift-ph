@@ -43,20 +43,36 @@ const socialLinks = [
   },
 ]
 
-export function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  })
+const EMPTY_FORM = { name: '', email: '', phone: '', subject: '', message: '' }
 
-  const handleSubmit = (e: React.FormEvent) => {
+export function ContactForm() {
+  const [formData, setFormData] = useState(EMPTY_FORM)
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! We will get back to you soon.')
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+    setStatus('loading')
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: '1efe588e-804e-4380-bab0-97f1ac0d8950',
+          from_name: formData.name,
+          ...formData,
+          subject: `New inquiry: ${formData.subject}`,
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setStatus('success')
+        setFormData(EMPTY_FORM)
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -95,7 +111,25 @@ export function ContactForm() {
               <label htmlFor="message" className="block text-sm font-medium mb-2">Message *</label>
               <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Tell us more about your requirements..." rows={5} />
             </div>
-            <Button type="submit" size="lg" className="w-full">Send Message</Button>
+            <Button
+              type="submit"
+              size="lg"
+              className="w-full"
+              disabled={status === 'loading' || status === 'success'}
+            >
+              {status === 'loading' ? 'Sending…' : 'Send Message'}
+            </Button>
+
+            {status === 'success' && (
+              <p className="text-sm text-green-600 font-medium text-center pt-1">
+                ✓ Message sent! We&apos;ll get back to you shortly.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="text-sm text-red-600 font-medium text-center pt-1">
+                Something went wrong. Please try again or contact us directly.
+              </p>
+            )}
           </form>
         </CardContent>
       </Card>
