@@ -10,6 +10,7 @@ import { VideoCard } from '@/components/video-card'
 export const metadata: Metadata = {
   title: 'HELI Forklift Philippines | Authorized Dealer in Bulacan',
   description: 'Authorized HELI forklift dealer in Guiguinto, Bulacan. Buy lithium battery, electric, and diesel forklifts, reach trucks, and warehouse equipment with full sales and after-sales support across the Philippines.',
+  alternates: { canonical: 'https://heliforkliftph.com' },
   openGraph: {
     title: 'HELI Forklift Philippines | Authorized Dealer — Bulacan',
     description: 'Buy genuine HELI forklifts in the Philippines from our Guiguinto, Bulacan branch. Lithium battery, electric & diesel forklifts, reach trucks, and full after-sales service. Call +63 991 113 4556.',

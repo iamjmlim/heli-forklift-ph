@@ -15,7 +15,7 @@ const roboto = Roboto({
 
 const siteUrl = process.env.GITHUB_PAGES === 'true'
   ? 'https://iamjmlim.github.io/heli-forklift-ph'
-  : (process.env.NEXT_PUBLIC_SITE_URL || 'https://heli-forklift-ph.vercel.app')
+  : (process.env.NEXT_PUBLIC_SITE_URL || 'https://heliforkliftph.com')
 
 const ogImage = {
   url: `${siteUrl}/og-image.jpg`,
@@ -57,6 +57,9 @@ export const metadata: Metadata = {
     'forklift Metro Manila',
     'forklift Central Luzon',
   ],
+  alternates: {
+    canonical: siteUrl,
+  },
   authors: [{ name: 'Heli Forklift Philippines' }],
   creator: 'Heli Forklift Philippines',
   publisher: 'Heli Forklift Philippines',

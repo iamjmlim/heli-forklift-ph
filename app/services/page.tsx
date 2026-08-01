@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'preventive maintenance forklift Philippines',
     'forklift technician Philippines',
   ],
+  alternates: { canonical: 'https://heliforkliftph.com/services' },
   openGraph: {
     title: 'Forklift Maintenance, Repair & Service in the Philippines',
     description: 'Full after-sales support for HELI forklifts in the Philippines — preventive maintenance, emergency repairs, installation, and certified operator training. Based in Guiguinto, Bulacan.',

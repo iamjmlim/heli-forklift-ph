@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     'buy forklift Philippines',
     'forklift Bulacan',
   ],
+  alternates: { canonical: 'https://heliforkliftph.com/products' },
   openGraph: {
     title: 'HELI Forklift Products for Sale in the Philippines',
     description: 'Lithium battery, electric, diesel forklifts, reach trucks, and warehouse equipment — complete HELI lineup available from authorized dealer in Guiguinto, Bulacan.',

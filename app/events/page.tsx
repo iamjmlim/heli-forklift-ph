@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'forklift trade show Philippines',
     'forklift demonstration Philippines',
   ],
+  alternates: { canonical: 'https://heliforkliftph.com/events' },
   openGraph: {
     title: 'HELI Forklift Events & Exhibits in the Philippines',
     description: 'Live equipment displays, client demonstrations, and international trade exhibitions from Heli Forklift Philippines — your authorized HELI dealer in Bulacan.',

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'forklift dealer Guiguinto Bulacan',
     'HELI forklift phone number Philippines',
   ],
+  alternates: { canonical: 'https://heliforkliftph.com/contact' },
   openGraph: {
     title: 'Contact Heli Forklift Philippines | Guiguinto, Bulacan',
     description: 'Reach us at Km. 60 Plaridel Bypass Road, Guiguinto, Bulacan — call +63 991 113 4556 or message us on Messenger, Viber, or WeChat. Open daily 8:30AM–5:30PM.',

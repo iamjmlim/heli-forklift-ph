@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'HELI forklift agent Philippines',
     'forklift distributor Bulacan',
   ],
+  alternates: { canonical: 'https://heliforkliftph.com/about' },
   openGraph: {
     title: 'About Heli Forklift Philippines | Authorized HELI Dealer',
     description: 'Authorized HELI sales agent in Guiguinto, Bulacan. Supplying premium forklifts and material handling equipment across the Philippines with full local after-sales support.',
