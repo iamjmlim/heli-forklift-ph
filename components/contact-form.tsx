@@ -57,7 +57,7 @@ export function ContactForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: '1efe588e-804e-4380-bab0-97f1ac0d8950',
+          access_key: 'f6732e85-0ec8-4102-aafb-cfebe00c43fe',
           from_name: formData.name,
           ...formData,
           subject: `New inquiry: ${formData.subject}`,
