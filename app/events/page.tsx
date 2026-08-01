@@ -49,13 +49,13 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#001A47] to-[#002E7D] py-20">
+      <section className="bg-[#0C1019] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Events & Exhibits
             </h1>
-            <p className="text-xl text-blue-200">
+            <p className="text-xl text-gray-400">
               From local client displays to international trade exhibitions — see HELI equipment up close
             </p>
           </div>
@@ -70,14 +70,14 @@ export default function EventsPage() {
               <div key={eventIndex}>
                 <div className="mb-8">
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{event.title}</h2>
-                  <p className="text-[#0052B4] font-medium text-sm mb-3">{event.subtitle}</p>
+                  <p className="text-[#E60012] font-medium text-sm mb-3">{event.subtitle}</p>
                   <p className="text-gray-600 max-w-2xl">{event.description}</p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {event.images.map((src, i) => (
                     <div
                       key={i}
-                      className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+                      className="relative aspect-[4/3] overflow-hidden shadow-md hover:shadow-xl transition-shadow"
                     >
                       <Image
                         src={getAssetPath(src)}
@@ -96,16 +96,16 @@ export default function EventsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#0052B4]">
+      <section className="py-16 bg-[#E60012]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Interested in a Live Demo?</h2>
-            <p className="text-blue-100 text-lg mb-8">
+            <p className="text-red-100 text-lg mb-8">
               Contact us to arrange a product demonstration at your facility
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white text-[#0052B4] hover:bg-blue-50 font-bold px-8 py-4 rounded-sm transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-white text-[#E60012] hover:bg-red-50 font-bold px-8 py-4 transition-colors duration-200"
             >
               Get in Touch
             </Link>

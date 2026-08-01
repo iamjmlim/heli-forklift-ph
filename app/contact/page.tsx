@@ -18,14 +18,14 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#001A47] to-[#002E7D] py-20">
+      {/* Hero */}
+      <section className="bg-[#0C1019] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Contact Us
             </h1>
-            <p className="text-xl text-blue-200">
+            <p className="text-xl text-gray-400">
               Get in touch with us today. We&apos;re here to help with all your material handling needs.
             </p>
           </div>
@@ -39,13 +39,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
+      {/* FAQ */}
+      <section className="py-16 bg-[#F7F7F7]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
+            <div className="w-10 h-0.5 bg-[#E60012] mb-10" />
             <div className="space-y-6">
-              <Card>
+              <Card className="border-gray-100">
                 <CardHeader>
                   <CardTitle className="text-lg">What areas do you serve?</CardTitle>
                 </CardHeader>
@@ -56,7 +57,7 @@ export default function ContactPage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-gray-100">
                 <CardHeader>
                   <CardTitle className="text-lg">Do you offer financing options?</CardTitle>
                 </CardHeader>
@@ -67,14 +68,14 @@ export default function ContactPage() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-gray-100">
                 <CardHeader>
                   <CardTitle className="text-lg">What warranty do you provide?</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">
                     All our equipment comes with manufacturer warranties. Extended warranty options are also available.
-                    Specific warranty terms vary by product - contact us for detailed information.
+                    Specific warranty terms vary by product — contact us for detailed information.
                   </p>
                 </CardContent>
               </Card>

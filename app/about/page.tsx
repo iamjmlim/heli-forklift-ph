@@ -20,13 +20,13 @@ export default function AboutPage() {
     <div className="min-h-screen">
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#001A47] to-[#002E7D] py-20">
+      <section className="bg-[#0C1019] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               About Us
             </h1>
-            <p className="text-xl text-blue-200">
+            <p className="text-xl text-gray-400">
               Your trusted partner in industrial material handling solutions
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-3 text-gray-900">Our Story</h2>
-            <div className="w-10 h-0.5 bg-[#0052B4] mb-8" />
+            <div className="w-10 h-0.5 bg-[#E60012] mb-8" />
             <div className="space-y-5 text-gray-600 leading-relaxed">
               <p>
                 Heli Forklift Philippines has been an authorized HELI sales agent delivering
@@ -65,15 +65,15 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 bg-[#F5F7FB]">
+      <section className="py-16 bg-[#F7F7F7]">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="bg-white border-gray-100">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-[#E8F2FF] rounded-sm flex items-center justify-center flex-shrink-0">
-                      <Target className="h-5 w-5 text-[#0052B4]" />
+                    <div className="w-10 h-10 bg-[#FFF0F0] flex items-center justify-center flex-shrink-0">
+                      <Target className="h-5 w-5 text-[#E60012]" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">Our Mission</h3>
                   </div>
@@ -88,8 +88,8 @@ export default function AboutPage() {
               <Card className="bg-white border-gray-100">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-[#E8F2FF] rounded-sm flex items-center justify-center flex-shrink-0">
-                      <Eye className="h-5 w-5 text-[#0052B4]" />
+                    <div className="w-10 h-10 bg-[#FFF0F0] flex items-center justify-center flex-shrink-0">
+                      <Eye className="h-5 w-5 text-[#E60012]" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">Our Vision</h3>
                   </div>
@@ -110,7 +110,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-3 text-gray-900">Our Core Values</h2>
-            <div className="w-10 h-0.5 bg-[#0052B4] mb-12" />
+            <div className="w-10 h-0.5 bg-[#E60012] mb-12" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 { icon: Award, label: 'Quality', desc: 'We never compromise on the quality of our products and services' },
@@ -119,8 +119,8 @@ export default function AboutPage() {
                 { icon: Eye, label: 'Innovation', desc: 'We embrace new technologies and continuous improvement' },
               ].map(({ icon: Icon, label, desc }) => (
                 <div key={label} className="text-center">
-                  <div className="w-14 h-14 bg-[#E8F2FF] rounded-sm flex items-center justify-center mx-auto mb-4">
-                    <Icon className="h-7 w-7 text-[#0052B4]" />
+                  <div className="w-14 h-14 bg-[#FFF0F0] flex items-center justify-center mx-auto mb-4">
+                    <Icon className="h-7 w-7 text-[#E60012]" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">{label}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
@@ -132,11 +132,11 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-[#F5F7FB]">
+      <section className="py-16 bg-[#F7F7F7]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-3 text-gray-900">Our Impact</h2>
-            <div className="w-10 h-0.5 bg-[#0052B4] mb-12" />
+            <div className="w-10 h-0.5 bg-[#E60012] mb-12" />
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 { value: '15+', label: 'Years in Business' },
@@ -144,18 +144,18 @@ export default function AboutPage() {
                 { value: '1000+', label: 'HELI Units Deployed' },
                 { value: '24/7', label: 'Technical Support' },
               ].map(({ value, label }) => (
-                <div key={label} className="text-center py-8 px-4 bg-white border border-gray-100 rounded-sm">
-                  <div className="text-4xl font-bold text-[#0052B4] mb-1.5">{value}</div>
+                <div key={label} className="text-center py-8 px-4 bg-white border border-gray-100">
+                  <div className="text-4xl font-bold text-[#E60012] mb-1.5">{value}</div>
                   <div className="text-sm text-gray-500">{label}</div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 p-8 bg-[#001A47] rounded-sm text-center">
+            <div className="mt-10 p-8 bg-[#0C1019] text-center">
               <h3 className="text-xl font-bold mb-3 text-white">
                 Authorized HELI Sales Agent
               </h3>
-              <p className="text-blue-200 text-sm leading-relaxed max-w-2xl mx-auto">
+              <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mx-auto">
                 As an authorized sales agent of HELI — one of the world&apos;s top forklift manufacturers
                 with decades of manufacturing excellence — we provide access to a comprehensive product range,
                 genuine parts, factory-trained technicians, and full warranty coverage.
@@ -166,16 +166,16 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#0052B4]">
+      <section className="py-16 bg-[#E60012]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Let&apos;s Work Together</h2>
-            <p className="text-blue-100 text-lg mb-8">
+            <p className="text-red-100 text-lg mb-8">
               Discover how we can help optimize your material handling operations
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white text-[#0052B4] hover:bg-blue-50 font-bold px-8 py-4 rounded-sm transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-white text-[#E60012] hover:bg-red-50 font-bold px-8 py-4 transition-colors duration-200"
             >
               Get in Touch
               <ArrowRight className="h-4 w-4" />

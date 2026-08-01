@@ -26,7 +26,7 @@ export function Navigation() {
 
           {/* Logo */}
           <Link href="/" className="flex flex-col leading-none select-none" onClick={() => setOpen(false)}>
-            <span className="text-[#0052B4] font-bold text-xl tracking-wide" style={{ fontFamily: 'var(--font-barlow), sans-serif' }}>
+            <span className="text-[#E60012] font-bold text-xl tracking-wide" style={{ fontFamily: 'var(--font-roboto), sans-serif' }}>
               HELI
             </span>
             <span className="text-gray-500 text-[10px] font-medium tracking-[0.18em] uppercase">
@@ -44,12 +44,12 @@ export function Navigation() {
                   href={href}
                   className={cn(
                     'relative px-4 py-5 text-sm font-medium transition-colors duration-150',
-                    active ? 'text-[#0052B4]' : 'text-gray-600 hover:text-[#0052B4]'
+                    active ? 'text-[#E60012]' : 'text-gray-600 hover:text-[#E60012]'
                   )}
                 >
                   {label}
                   {active && (
-                    <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-[#0052B4] rounded-full" />
+                    <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-[#E60012] rounded-full" />
                   )}
                 </Link>
               )
@@ -60,12 +60,12 @@ export function Navigation() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden md:inline-flex items-center bg-[#0052B4] hover:bg-[#003D8A] text-white text-sm font-semibold px-5 py-2 rounded-sm transition-colors duration-150"
+              className="hidden md:inline-flex items-center bg-[#E60012] hover:bg-[#B8000F] text-white text-sm font-semibold px-5 py-2 rounded-sm transition-colors duration-150"
             >
               Get a Quote
             </Link>
             <button
-              className="md:hidden p-2 text-gray-600 hover:text-[#0052B4] transition-colors"
+              className="md:hidden p-2 text-gray-600 hover:text-[#E60012] transition-colors"
               onClick={() => setOpen(!open)}
               aria-label="Toggle menu"
             >
@@ -90,8 +90,8 @@ export function Navigation() {
               className={cn(
                 'py-3 px-2 text-sm font-medium border-b border-gray-50 last:border-0 transition-colors',
                 pathname === href
-                  ? 'text-[#0052B4]'
-                  : 'text-gray-700 hover:text-[#0052B4]'
+                  ? 'text-[#E60012]'
+                  : 'text-gray-700 hover:text-[#E60012]'
               )}
               onClick={() => setOpen(false)}
             >
@@ -100,7 +100,7 @@ export function Navigation() {
           ))}
           <Link
             href="/contact"
-            className="mt-4 bg-[#0052B4] hover:bg-[#003D8A] text-white text-sm font-semibold px-4 py-3 rounded-sm text-center transition-colors duration-150"
+            className="mt-4 bg-[#E60012] hover:bg-[#B8000F] text-white text-sm font-semibold px-4 py-3 rounded-sm text-center transition-colors duration-150"
             onClick={() => setOpen(false)}
           >
             Get a Quote

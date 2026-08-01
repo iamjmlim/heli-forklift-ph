@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter, Barlow } from 'next/font/google'
+import { Inter, Roboto } from 'next/font/google'
 import './globals.css'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
-const barlow = Barlow({
+const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['500', '600', '700', '800'],
-  variable: '--font-barlow',
+  weight: ['400', '500', '700', '900'],
+  variable: '--font-roboto',
 })
 
 const siteUrl = process.env.GITHUB_PAGES === 'true'
@@ -110,8 +110,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.className} ${barlow.variable}`}>
-        {/* THESIS: Philippine HELI agent site in HELI's global corporate brand language; refuses the split-hero orange-gradient card page every local equipment supplier ships. OWN-WORLD: HELI Blue #0052B4 on white; navy #001A47 for nav/footer; section alt-ground #F5F7FB; Barlow 700 display + Inter body; image-header cards with blue hover. STORY: visitor lands on HELI's industrial scale and local presence, navigates by category, reaches a quote form without friction. FIRST VIEWPORT: full-viewport dark navy hero, forklift photo at 20% opacity, white H1 at 4.5rem, one-line subhead, solid-blue + ghost-outline CTAs. FORM: corporate industrial catalog; helichina.net reference; seed 97bb166a; direct section-by-section staging. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md */}
+      <body className={`${inter.className} ${roboto.variable}`}>
         <Navigation />
         <main className="min-h-screen">
           {children}

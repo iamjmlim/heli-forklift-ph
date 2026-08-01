@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Battery, Truck, PackageOpen, Boxes, Forklift, Package, Zap, Factory, Warehouse, TrendingUp, Tractor } from 'lucide-react'
+import { Battery, Truck, PackageOpen, Zap, Factory, Package, Warehouse, TrendingUp, Tractor } from 'lucide-react'
 import Link from 'next/link'
 import { getAssetPath } from '@/lib/paths'
 
@@ -48,8 +48,6 @@ const productCategories = [
       'Smart battery management system'
     ],
     applications: 'Warehouses, Distribution Centers, Cold Storage, Manufacturing Facilities, Retail Operations',
-    color: 'text-orange-500',
-    bgColor: 'bg-[#F0F6FF]',
   },
   {
     id: 'electric-forklift',
@@ -73,8 +71,6 @@ const productCategories = [
       'Various battery options available'
     ],
     applications: 'Warehouses, Food & Beverage, Pharmaceuticals, Electronics, Indoor Logistics',
-    color: 'text-red-600',
-    bgColor: 'bg-[#F0F6FF]',
   },
   {
     id: 'internal-combustion',
@@ -101,8 +97,6 @@ const productCategories = [
       'Multiple fuel options: Diesel/LPG/Gas'
     ],
     applications: 'Construction Sites, Lumber Yards, Shipping Yards, Heavy Manufacturing, Outdoor Storage',
-    color: 'text-orange-500',
-    bgColor: 'bg-[#F0F6FF]',
   },
   {
     id: 'electric-storage',
@@ -127,8 +121,6 @@ const productCategories = [
       'Advanced safety systems'
     ],
     applications: 'High-Bay Warehouses, Distribution Centers, Narrow Aisle Storage, Cold Storage Facilities',
-    color: 'text-red-600',
-    bgColor: 'bg-[#F0F6FF]',
   },
   {
     id: 'heavy-forklift',
@@ -152,8 +144,6 @@ const productCategories = [
       'Specialized attachments available'
     ],
     applications: 'Steel Mills, Heavy Manufacturing, Mining Operations, Port Operations, Container Handling',
-    color: 'text-orange-500',
-    bgColor: 'bg-[#F0F6FF]',
   },
   {
     id: 'warehouse-truck',
@@ -177,8 +167,6 @@ const productCategories = [
       'Ideal for horizontal transport'
     ],
     applications: 'Retail Stores, Small Warehouses, Loading Docks, Manufacturing Floors, Distribution',
-    color: 'text-red-600',
-    bgColor: 'bg-[#F0F6FF]',
   },
   {
     id: 'wheel-loader',
@@ -203,32 +191,30 @@ const productCategories = [
       'Ideal for construction and bulk handling'
     ],
     applications: 'Construction Sites, Quarries, Mining, Ports, Agriculture, Road Building, Bulk Material Handling',
-    color: 'text-orange-500',
-    bgColor: 'bg-[#F0F6FF]',
   }
 ]
 
 export default function ProductsPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#001A47] to-[#002E7D] py-20">
+      {/* Hero */}
+      <section className="bg-[#0C1019] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               HELI Forklift Product Range
             </h1>
-            <p className="text-xl text-blue-200 mb-3">
+            <p className="text-xl text-gray-400 mb-3">
               Cutting-edge technology meets unparalleled performance
             </p>
-            <p className="text-blue-300 text-base">
+            <p className="text-gray-500 text-base">
               From powerful internal combustion models to efficient electric solutions — tailored for every industrial application
             </p>
           </div>
         </div>
       </section>
 
-      {/* Products Grid - Detailed Cards */}
+      {/* Products Grid */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="space-y-8">
@@ -236,18 +222,17 @@ export default function ProductsPage() {
               const IconComponent = product.icon
               return (
                 <Card key={index} className="hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <CardHeader className={product.bgColor}>
+                  <CardHeader className="bg-[#F7F7F7]">
                     <div className="flex flex-col gap-4">
-                      {/* Title and Description Row */}
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                         <div className="flex-1">
                           <div className="flex items-center gap-4 mb-3">
-                            <div className="p-3 rounded-sm bg-[#E8F2FF]">
-                              <IconComponent className={`h-8 w-8 ${product.color}`} />
+                            <div className="p-3 bg-[#FFF0F0]">
+                              <IconComponent className="h-8 w-8 text-[#E60012]" />
                             </div>
                             <div>
                               <CardTitle className="text-2xl md:text-3xl">{product.category}</CardTitle>
-                              <p className={`text-sm font-semibold ${product.color} mt-1`}>
+                              <p className="text-sm font-semibold text-[#E60012] mt-1">
                                 {product.tagline}
                               </p>
                             </div>
@@ -257,17 +242,16 @@ export default function ProductsPage() {
                           </CardDescription>
                         </div>
                         <div className="text-center md:text-right">
-                          <div className="inline-block px-4 py-2 rounded-sm bg-[#E8F2FF]">
+                          <div className="inline-block px-4 py-2 bg-[#FFF0F0]">
                             <p className="text-xs text-gray-600 uppercase font-semibold">Capacity Range</p>
-                            <p className={`text-lg font-bold ${product.color}`}>{product.capacityRange}</p>
+                            <p className="text-lg font-bold text-[#E60012]">{product.capacityRange}</p>
                           </div>
                         </div>
                       </div>
 
-                      {/* Product Images Row */}
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {product.images.map((imagePath, imgIndex) => (
-                          <div key={imgIndex} className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                          <div key={imgIndex} className="relative aspect-[4/3] bg-white overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                             <Image
                               src={getAssetPath(imagePath)}
                               alt={`${product.category} - Model ${imgIndex + 1}`}
@@ -282,35 +266,34 @@ export default function ProductsPage() {
                   </CardHeader>
                   <CardContent className="pt-6">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                      {/* Key Features */}
                       <div className="lg:col-span-2">
                         <h4 className="font-semibold mb-3 text-gray-900 flex items-center gap-2">
-                          <TrendingUp className="h-5 w-5 text-[#0052B4]" />
+                          <TrendingUp className="h-5 w-5 text-[#E60012]" />
                           Key Features & Benefits
                         </h4>
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                           {product.highlights.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-start">
-                              <span className={`${product.color} mr-2 font-bold`}>✓</span>
+                              <span className="text-[#E60012] mr-2 font-bold">✓</span>
                               <span className="text-gray-700 text-sm">{feature}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      {/* Applications */}
                       <div>
                         <h4 className="font-semibold mb-3 text-gray-900 flex items-center gap-2">
-                          <Warehouse className="h-5 w-5 text-[#0052B4]" />
+                          <Warehouse className="h-5 w-5 text-[#E60012]" />
                           Ideal Applications
                         </h4>
                         <p className="text-sm text-gray-600 leading-relaxed mb-4">
                           {product.applications}
                         </p>
-                        <Link href="/contact">
-                          <Link href="/contact" className="block text-center bg-[#0052B4] hover:bg-[#003D8A] text-white font-semibold px-4 py-2.5 rounded-sm transition-colors duration-150 text-sm">
-                            Request Quote
-                          </Link>
+                        <Link
+                          href="/contact"
+                          className="block text-center bg-[#E60012] hover:bg-[#B8000F] text-white font-semibold px-4 py-2.5 transition-colors duration-150 text-sm"
+                        >
+                          Request Quote
                         </Link>
                       </div>
                     </div>
@@ -322,12 +305,12 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Why Choose HELI */}
-      <section className="py-16 bg-[#F5F7FB]">
+      {/* Why HELI */}
+      <section className="py-16 bg-[#F7F7F7]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-3 text-gray-900">Why Choose HELI Forklifts?</h2>
-            <div className="w-10 h-0.5 bg-[#0052B4] mb-12" />
+            <div className="w-10 h-0.5 bg-[#E60012] mb-12" />
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 { value: '35+', label: 'Years Manufacturing Experience' },
@@ -335,8 +318,8 @@ export default function ProductsPage() {
                 { value: '100%', label: 'Quality Assurance' },
                 { value: '24/7', label: 'Service Support' },
               ].map(({ value, label }) => (
-                <div key={label} className="text-center py-8 px-4 bg-white border border-gray-100 rounded-sm">
-                  <div className="text-3xl font-bold text-[#0052B4] mb-1.5">{value}</div>
+                <div key={label} className="text-center py-8 px-4 bg-white border border-gray-100">
+                  <div className="text-3xl font-bold text-[#E60012] mb-1.5">{value}</div>
                   <p className="text-sm text-gray-500 leading-snug">{label}</p>
                 </div>
               ))}
@@ -345,21 +328,27 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-[#0052B4]">
+      {/* CTA */}
+      <section className="py-16 bg-[#E60012]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-4">
               Find Your Perfect Material Handling Solution
             </h2>
-            <p className="text-blue-100 text-lg mb-8">
+            <p className="text-red-100 text-lg mb-8">
               Our experts will help you select the right equipment for your specific needs and budget
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white text-[#0052B4] hover:bg-blue-50 font-bold px-8 py-4 rounded-sm transition-colors duration-200">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#E60012] hover:bg-red-50 font-bold px-8 py-4 transition-colors duration-200"
+              >
                 Request Consultation
               </Link>
-              <Link href="/services" className="inline-flex items-center justify-center gap-2 border border-white/50 hover:border-white text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-sm transition-all duration-200">
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center gap-2 border border-white/50 hover:border-white text-white hover:bg-white/10 font-semibold px-8 py-4 transition-all duration-200"
+              >
                 View Our Services
               </Link>
             </div>
@@ -367,29 +356,32 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Additional Information */}
+      {/* Additional Info */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Complete Material Handling Solutions</h2>
             <div className="prose prose-lg max-w-none text-gray-600 space-y-4">
               <p>
-                As an authorized HELI distributor in the Philippines, we provide access to one of the world&apos;s leading 
-                forklift manufacturers. HELI&apos;s comprehensive product range ensures we have the perfect solution for 
+                As an authorized HELI distributor in the Philippines, we provide access to one of the world&apos;s leading
+                forklift manufacturers. HELI&apos;s comprehensive product range ensures we have the perfect solution for
                 every material handling challenge, from light-duty warehouse operations to heavy industrial applications.
               </p>
               <p>
-                Every HELI forklift is engineered with precision and built to international quality standards. Our 
-                partnership with HELI allows us to offer competitive pricing, genuine parts, factory-trained technicians, 
+                Every HELI forklift is engineered with precision and built to international quality standards. Our
+                partnership with HELI allows us to offer competitive pricing, genuine parts, factory-trained technicians,
                 and comprehensive warranty coverage.
               </p>
               <p>
-                Whether you need a single unit or a complete fleet, we provide tailored solutions including equipment 
+                Whether you need a single unit or a complete fleet, we provide tailored solutions including equipment
                 selection, site assessment, operator training, preventive maintenance programs, and 24/7 emergency support.
               </p>
             </div>
             <div className="mt-8 text-center">
-              <Link href="/about" className="inline-flex items-center gap-2 border border-[#0052B4] text-[#0052B4] hover:bg-[#0052B4] hover:text-white font-semibold px-8 py-3 rounded-sm transition-colors duration-200">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 border border-[#E60012] text-[#E60012] hover:bg-[#E60012] hover:text-white font-semibold px-8 py-3 transition-colors duration-200"
+              >
                 Learn More About Us
               </Link>
             </div>

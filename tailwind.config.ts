@@ -19,11 +19,11 @@ const config: Config = {
     extend: {
       colors: {
         heli: {
-          blue: '#0052B4',
-          dark: '#002E7D',
-          navy: '#001A47',
-          light: '#E8F2FF',
-          muted: '#F5F7FB',
+          red: '#E60012',
+          dark: '#B8000F',
+          navy: '#0C1019',
+          light: '#FFF0F0',
+          muted: '#F7F7F7',
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
