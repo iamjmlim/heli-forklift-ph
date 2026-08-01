@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Mail } from 'lucide-react'
+import { Mail, Youtube, Linkedin, Facebook, Twitter } from 'lucide-react'
 
 const quickLinks = [
   ['/', 'Home'],
@@ -11,18 +11,25 @@ const quickLinks = [
 ] as const
 
 const productLinks = [
-  'Lithium Battery Forklift',
-  'Electric Forklift',
-  'Internal Combustion Forklift',
-  'Electric Storage Series',
-  'Warehouse Truck',
-  'Wheel Loader',
+  ['Lithium Battery Forklift', '/products#lithium-battery'],
+  ['Electric Forklift', '/products#electric-forklift'],
+  ['Internal Combustion Forklift', '/products#internal-combustion'],
+  ['Electric Storage Series', '/products#electric-storage'],
+  ['Warehouse Truck', '/products#warehouse-truck'],
+  ['Wheel Loader', '/products#wheel-loader'],
 ] as const
+
+const socialLinks = [
+  { icon: Youtube, href: 'https://www.youtube.com/@HELIForklift', label: 'YouTube' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/heli-forklift', label: 'LinkedIn' },
+  { icon: Facebook, href: 'https://www.facebook.com/HELIForklift', label: 'Facebook' },
+  { icon: Twitter, href: 'https://twitter.com/HELIForklift', label: 'Twitter / X' },
+]
 
 export function Footer() {
   return (
     <footer className="bg-[#0C1019] text-white">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-6 md:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* Brand */}
@@ -34,15 +41,31 @@ export function Footer() {
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
-              Authorized HELI sales agent in the Philippines. We supply premium material handling equipment with full local sales, installation, and after-sales support.
+              Authorized HELI sales agent in the Philippines. Premium material handling equipment with full local sales, installation, and after-sales support.
             </p>
             <a
               href="mailto:info@heliforklift.ph"
-              className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors mb-6"
             >
               <Mail className="h-4 w-4 flex-shrink-0" />
               info@heliforklift.ph
             </a>
+
+            {/* Social icons */}
+            <div className="flex items-center gap-3">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-9 h-9 border border-gray-700 hover:border-[#E60012] hover:bg-[#E60012] text-gray-400 hover:text-white flex items-center justify-center transition-all duration-200"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Navigation */}
@@ -70,24 +93,25 @@ export function Footer() {
               Products
             </h4>
             <ul className="space-y-3">
-              {productLinks.map((product) => (
-                <li key={product}>
+              {productLinks.map(([label, href]) => (
+                <li key={label}>
                   <Link
-                    href="/products"
+                    href={href}
                     className="text-gray-400 hover:text-white text-sm transition-colors"
                   >
-                    {product}
+                    {label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-[#1A1A2E]">
-        <div className="container mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div className="border-t border-white/5">
+        <div className="container mx-auto px-6 md:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-gray-600 text-xs">
             &copy; {new Date().getFullYear()} Heli Forklift Philippines. All rights reserved.
           </p>

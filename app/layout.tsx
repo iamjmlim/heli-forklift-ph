@@ -3,6 +3,7 @@ import { Inter, Roboto } from 'next/font/google'
 import './globals.css'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
+import { BackToTop } from '@/components/back-to-top'
 
 const inter = Inter({ subsets: ['latin'] })
 const roboto = Roboto({
@@ -116,6 +117,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   )
