@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { MessageCircle, X } from 'lucide-react'
 
 // Update these with actual Messenger username and Viber number
-const MESSENGER_URL = 'https://m.me/heliforkliftphilippines'
-const VIBER_URL = 'viber://chat?number=%2B639XXXXXXXXX'
+const MESSENGER_URL = 'https://m.me/ropher.guion'
+const VIBER_URL = 'viber://chat?number=%2B639911134556'
 
 const options = [
   {
