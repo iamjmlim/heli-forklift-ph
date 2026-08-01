@@ -50,7 +50,6 @@ const productCategories = [
     applications: 'Warehouses, Distribution Centers, Cold Storage, Manufacturing Facilities, Retail Operations',
     color: 'text-orange-500',
     bgColor: 'bg-[#F0F6FF]',
-    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'electric-forklift',
@@ -76,7 +75,6 @@ const productCategories = [
     applications: 'Warehouses, Food & Beverage, Pharmaceuticals, Electronics, Indoor Logistics',
     color: 'text-red-600',
     bgColor: 'bg-[#F0F6FF]',
-    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'internal-combustion',
@@ -105,7 +103,6 @@ const productCategories = [
     applications: 'Construction Sites, Lumber Yards, Shipping Yards, Heavy Manufacturing, Outdoor Storage',
     color: 'text-orange-500',
     bgColor: 'bg-[#F0F6FF]',
-    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'electric-storage',
@@ -132,7 +129,6 @@ const productCategories = [
     applications: 'High-Bay Warehouses, Distribution Centers, Narrow Aisle Storage, Cold Storage Facilities',
     color: 'text-red-600',
     bgColor: 'bg-[#F0F6FF]',
-    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'heavy-forklift',
@@ -158,7 +154,6 @@ const productCategories = [
     applications: 'Steel Mills, Heavy Manufacturing, Mining Operations, Port Operations, Container Handling',
     color: 'text-orange-500',
     bgColor: 'bg-[#F0F6FF]',
-    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'warehouse-truck',
@@ -184,7 +179,6 @@ const productCategories = [
     applications: 'Retail Stores, Small Warehouses, Loading Docks, Manufacturing Floors, Distribution',
     color: 'text-red-600',
     bgColor: 'bg-[#F0F6FF]',
-    borderColor: 'border-l-[#0052B4]'
   },
   {
     id: 'wheel-loader',
@@ -211,7 +205,6 @@ const productCategories = [
     applications: 'Construction Sites, Quarries, Mining, Ports, Agriculture, Road Building, Bulk Material Handling',
     color: 'text-orange-500',
     bgColor: 'bg-[#F0F6FF]',
-    borderColor: 'border-l-[#0052B4]'
   }
 ]
 
@@ -242,7 +235,7 @@ export default function ProductsPage() {
             {productCategories.map((product, index) => {
               const IconComponent = product.icon
               return (
-                <Card key={index} className={`hover:shadow-2xl transition-all duration-300 border-l-4 ${product.borderColor}`}>
+                <Card key={index} className="hover:shadow-xl transition-all duration-300 border border-gray-100">
                   <CardHeader className={product.bgColor}>
                     <div className="flex flex-col gap-4">
                       {/* Title and Description Row */}

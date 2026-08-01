@@ -142,7 +142,7 @@ export default function HomePage() {
         {/* Scroll cue */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-blue-400">
           <span className="text-[10px] tracking-[0.2em] uppercase">Scroll</span>
-          <ChevronDown className="h-4 w-4 animate-bounce" />
+          <ChevronDown className="h-4 w-4 opacity-60" />
         </div>
       </section>
 
