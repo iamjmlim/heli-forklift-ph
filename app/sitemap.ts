@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 
 const siteUrl = process.env.GITHUB_PAGES === 'true'
   ? 'https://iamjmlim.github.io/heli-forklift-ph'
-  : (process.env.NEXT_PUBLIC_SITE_URL || 'https://heliforkliftph.com')
+  : 'https://heliforkliftph.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
