@@ -8,12 +8,40 @@ export const metadata: Metadata = {
   title: 'About Us — Authorized HELI Forklift Dealer in the Philippines',
   description: 'Heli Forklift Philippines is an authorized HELI sales agent based in Guiguinto, Bulacan. We deliver premium forklifts and material handling equipment with full sales, installation, and after-sales service across the Philippines.',
   keywords: [
+    // Brand authority
     'HELI forklift authorized dealer Philippines',
+    'HELI forklift distributor Philippines',
+    'HELI forklift agent Philippines',
+    'HELI forklift importer Philippines',
+    'authorized HELI dealer Philippines',
+    'official HELI forklift Philippines',
+    'HELI forklift Philippines company',
+    // Company
+    'forklift company Philippines',
     'forklift company Bulacan',
     'forklift dealer Guiguinto',
-    'material handling company Philippines',
-    'HELI forklift agent Philippines',
+    'forklift dealer Bulacan',
+    'forklift distributor Philippines',
     'forklift distributor Bulacan',
+    'material handling company Philippines',
+    'material handling supplier Philippines',
+    'lifting equipment company Philippines',
+    'industrial equipment company Philippines',
+    // Trust / comparison
+    'best forklift dealer Philippines',
+    'top forklift supplier Philippines',
+    'trusted forklift dealer Philippines',
+    'reliable forklift supplier Philippines',
+    'legit forklift dealer Philippines',
+    // Location
+    'forklift company Guiguinto Bulacan',
+    'forklift company Plaridel Bulacan',
+    'forklift company Central Luzon',
+    'forklift company Metro Manila',
+    // Luzon coverage
+    'forklift supplier Luzon',
+    'forklift dealer Luzon',
+    'nationwide forklift dealer Philippines',
   ],
   alternates: { canonical: 'https://heliforkliftph.com/about' },
   openGraph: {
