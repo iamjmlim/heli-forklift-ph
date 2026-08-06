@@ -234,7 +234,51 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 6. CONTACT CTA ── */}
+      {/* ── 6. SEO LOCAL BUSINESS CONTENT ── */}
+      <section className="py-20 bg-[#F7F7F7]">
+        <div className="container mx-auto px-6 md:px-10">
+          <div className="max-w-5xl mx-auto">
+            <p className="text-[#E60012] text-xs font-bold tracking-[0.3em] uppercase mb-3">Why Choose Us</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Authorized HELI Forklift Dealer in the Philippines
+            </h2>
+            <div className="w-10 h-0.5 bg-[#E60012] mb-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-600 leading-relaxed">
+              <div className="space-y-4">
+                <p>
+                  <strong className="text-gray-900">Heli Forklift Philippines</strong> is the authorized HELI forklift dealer and distributor serving Metro Manila, Bulacan, Central Luzon, CALABARZON, and all major industrial areas across Luzon. Our main branch is located at <strong className="text-gray-900">Km. 60 Plaridel Bypass Road, Brgy. Cutcut, Guiguinto, Bulacan</strong> — open Monday to Sunday, 8:30 AM to 5:30 PM.
+                </p>
+                <p>
+                  We supply the complete HELI lineup: <strong className="text-gray-900">lithium battery forklifts, electric forklifts, diesel forklifts, LPG forklifts, reach trucks, pallet trucks, warehouse stackers, heavy forklifts, and wheel loaders</strong> — ranging from 1 ton to 32 tons capacity. Whether you need a single unit or an entire fleet, we provide competitive pricing and flexible payment options.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <p>
+                  Beyond sales, we offer <strong className="text-gray-900">forklift maintenance, emergency repair, spare parts supply, installation, operator training, and equipment customization</strong>. Our factory-trained technicians are deployed across Luzon to ensure fast on-site service response for all clients.
+                </p>
+                <p>
+                  HELI is one of the world&apos;s largest forklift manufacturers with over 35 years of experience, exporting to 100+ countries. As your local authorized dealer, we bring global-quality equipment with full local after-sales support. Contact us at <strong className="text-gray-900">+63 991 113 4556</strong> via call, Viber, or Messenger to request a quotation or arrange a product demonstration.
+                </p>
+              </div>
+            </div>
+            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { label: 'Service Areas', value: 'Luzon-Wide' },
+                { label: 'Capacity Range', value: '1 – 32 tons' },
+                { label: 'Business Hours', value: 'Mon–Sun 8:30–5:30' },
+                { label: 'Contact', value: '+63 991 113 4556' },
+              ].map(({ label, value }) => (
+                <div key={label} className="bg-white border border-gray-100 p-4 text-center">
+                  <p className="text-xs text-[#E60012] font-bold uppercase tracking-wider mb-1">{label}</p>
+                  <p className="font-bold text-gray-900 text-sm">{value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 7. CONTACT CTA ── */}
       <section className="py-24 bg-[#E60012]">
         <div className="container mx-auto px-6 md:px-10 text-center">
           <h2 className="font-bold text-white mb-4" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)' }}>

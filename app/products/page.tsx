@@ -7,8 +7,127 @@ import { getAssetPath } from '@/lib/paths'
 
 const ogImage = '/og-image.jpg'
 
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'HELI Forklift Products for Sale in the Philippines',
+  description: 'Complete lineup of HELI forklifts available from authorized dealer in Guiguinto, Bulacan, Philippines.',
+  numberOfItems: 7,
+  itemListElement: [
+    {
+      '@type': 'ListItem', position: 1,
+      item: {
+        '@type': 'Product',
+        name: 'HELI Lithium Battery Forklift Philippines',
+        description: 'Advanced lithium-ion powered counterbalanced forklifts for zero-emission indoor operations. Available in 1.0 to 10.0 ton capacity. Fast charging, long battery life, ideal for multi-shift warehouse operations in the Philippines.',
+        brand: { '@type': 'Brand', name: 'HELI' },
+        category: 'Lithium Battery Forklift',
+        offers: { '@type': 'Offer', seller: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'PH', availability: 'https://schema.org/InStock', priceCurrency: 'PHP' },
+      },
+    },
+    {
+      '@type': 'ListItem', position: 2,
+      item: {
+        '@type': 'Product',
+        name: 'HELI Electric Forklift Philippines',
+        description: 'Quiet, zero-emission electric counterbalanced forklifts for indoor warehouse and logistics operations. Available in 1.3 to 2.0 ton capacity.',
+        brand: { '@type': 'Brand', name: 'HELI' },
+        category: 'Electric Forklift',
+        offers: { '@type': 'Offer', seller: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'PH', availability: 'https://schema.org/InStock', priceCurrency: 'PHP' },
+      },
+    },
+    {
+      '@type': 'ListItem', position: 3,
+      item: {
+        '@type': 'Product',
+        name: 'HELI Diesel Forklift Philippines',
+        description: 'Heavy-duty diesel and LPG internal combustion forklifts for outdoor and tough industrial operations. Available in 6.0 to 10.0 ton capacity.',
+        brand: { '@type': 'Brand', name: 'HELI' },
+        category: 'Diesel Forklift',
+        offers: { '@type': 'Offer', seller: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'PH', availability: 'https://schema.org/InStock', priceCurrency: 'PHP' },
+      },
+    },
+    {
+      '@type': 'ListItem', position: 4,
+      item: {
+        '@type': 'Product',
+        name: 'HELI Reach Truck Philippines',
+        description: 'Electric reach trucks and stackers for narrow aisle, high-bay warehouse storage. Available in 1.4 to 2.0 ton capacity, reach up to 12 meters.',
+        brand: { '@type': 'Brand', name: 'HELI' },
+        category: 'Reach Truck',
+        offers: { '@type': 'Offer', seller: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'PH', availability: 'https://schema.org/InStock', priceCurrency: 'PHP' },
+      },
+    },
+    {
+      '@type': 'ListItem', position: 5,
+      item: {
+        '@type': 'Product',
+        name: 'HELI Heavy Forklift Philippines',
+        description: 'Extra heavy-duty internal combustion forklifts for steel mills, ports, and heavy manufacturing. Available in 20.0 to 32.0 ton capacity.',
+        brand: { '@type': 'Brand', name: 'HELI' },
+        category: 'Heavy Forklift',
+        offers: { '@type': 'Offer', seller: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'PH', availability: 'https://schema.org/InStock', priceCurrency: 'PHP' },
+      },
+    },
+    {
+      '@type': 'ListItem', position: 6,
+      item: {
+        '@type': 'Product',
+        name: 'HELI Electric Pallet Truck Philippines',
+        description: 'Electric hand pallet trucks, stackers, and warehouse trucks for horizontal transport and loading dock operations. Up to 2.0 ton capacity.',
+        brand: { '@type': 'Brand', name: 'HELI' },
+        category: 'Warehouse Truck',
+        offers: { '@type': 'Offer', seller: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'PH', availability: 'https://schema.org/InStock', priceCurrency: 'PHP' },
+      },
+    },
+    {
+      '@type': 'ListItem', position: 7,
+      item: {
+        '@type': 'Product',
+        name: 'HELI Wheel Loader Philippines',
+        description: 'Heavy-duty wheel loaders for construction, earthmoving, and bulk material handling. Available in 1.0 to 5.0 ton capacity.',
+        brand: { '@type': 'Brand', name: 'HELI' },
+        category: 'Wheel Loader',
+        offers: { '@type': 'Offer', seller: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'PH', availability: 'https://schema.org/InStock', priceCurrency: 'PHP' },
+      },
+    },
+  ],
+}
+
+const productFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the price of a HELI forklift in the Philippines?',
+      acceptedAnswer: { '@type': 'Answer', text: 'HELI forklift prices in the Philippines vary by model and capacity. Entry-level electric and warehouse forklifts start at lower price points, while heavy-duty diesel and lithium battery models are priced higher. Contact Heli Forklift Philippines at +63 991 113 4556 for an exact quotation based on your requirements.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What types of forklifts are available in the Philippines?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Heli Forklift Philippines offers lithium battery forklifts, electric forklifts, diesel forklifts, LPG forklifts, reach trucks, electric pallet trucks, warehouse stackers, heavy forklifts (up to 32 tons), and wheel loaders — all from the HELI brand, one of the world\'s largest forklift manufacturers.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you deliver forklifts outside Bulacan?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Heli Forklift Philippines delivers and services forklifts across Luzon including Metro Manila, Pampanga, Nueva Ecija, Tarlac, Laguna, Cavite, Batangas, and all surrounding provinces. Contact us to arrange delivery to your location.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which forklift is best for a warehouse in the Philippines?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For warehouse operations in the Philippines, we recommend HELI lithium battery forklifts or electric forklifts for indoor use — they produce zero emissions, operate quietly, and have low running costs. For high-bay storage, HELI reach trucks maximize vertical space efficiency. Contact our team for a site-specific recommendation.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I get financing or installment for a forklift in the Philippines?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, flexible financing options are available for HELI forklifts in the Philippines. Contact Heli Forklift Philippines at +63 991 113 4556 or email agaropher111@gmail.com to discuss payment plans and installment schemes.' },
+    },
+  ],
+}
+
 export const metadata: Metadata = {
-  title: 'Products — HELI Forklifts & Material Handling Equipment Philippines',
+  title: 'HELI Forklifts for Sale Philippines | Buy Direct from Authorized Dealer in Bulacan',
   description: 'Browse the complete HELI forklift lineup available in the Philippines: lithium battery forklifts, electric forklifts, diesel forklifts, reach trucks, heavy forklifts, warehouse trucks, and wheel loaders. Buy direct from authorized dealer in Bulacan.',
   keywords: [
     // Buy intent
@@ -275,18 +394,21 @@ const productCategories = [
 export default function ProductsPage() {
   return (
     <div className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productFaqSchema) }} />
+
       {/* Hero */}
       <section className="bg-[#0C1019] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-              HELI Forklift Product Range
+              HELI Forklifts for Sale in the Philippines
             </h1>
             <p className="text-xl text-gray-400 mb-3">
-              Cutting-edge technology meets unparalleled performance
+              Authorized HELI Dealer — Guiguinto, Bulacan
             </p>
             <p className="text-gray-500 text-base">
-              From powerful internal combustion models to efficient electric solutions — tailored for every industrial application
+              Lithium battery, electric, diesel forklifts, reach trucks, warehouse equipment & wheel loaders — complete product range with competitive pricing and full after-sales support across Luzon
             </p>
           </div>
         </div>
@@ -332,7 +454,7 @@ export default function ProductsPage() {
                           <div key={imgIndex} className="relative aspect-[4/3] bg-white overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                             <Image
                               src={getAssetPath(imagePath)}
-                              alt={`${product.category} - Model ${imgIndex + 1}`}
+                              alt={`HELI ${product.category} for sale Philippines - ${product.capacityRange} - authorized dealer Bulacan`}
                               fill
                               className="object-contain p-2"
                               sizes="(max-width: 768px) 50vw, 33vw"
@@ -438,21 +560,17 @@ export default function ProductsPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Complete Material Handling Solutions</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Buy HELI Forklifts in the Philippines — Authorized Dealer in Bulacan</h2>
+            <div className="w-10 h-0.5 bg-[#E60012] mb-8" />
             <div className="prose prose-lg max-w-none text-gray-600 space-y-4">
               <p>
-                As an authorized HELI distributor in the Philippines, we provide access to one of the world&apos;s leading
-                forklift manufacturers. HELI&apos;s comprehensive product range ensures we have the perfect solution for
-                every material handling challenge, from light-duty warehouse operations to heavy industrial applications.
+                <strong>Heli Forklift Philippines</strong> is the authorized HELI forklift dealer serving Metro Manila, Bulacan, Central Luzon, and surrounding provinces. Our showroom and main branch is located at <strong>Km. 60 Plaridel Bypass Road, Brgy. Cutcut, Guiguinto, Bulacan</strong> — conveniently accessible from NLEX and major industrial zones across Luzon.
               </p>
               <p>
-                Every HELI forklift is engineered with precision and built to international quality standards. Our
-                partnership with HELI allows us to offer competitive pricing, genuine parts, factory-trained technicians,
-                and comprehensive warranty coverage.
+                We carry the complete HELI lineup: <strong>lithium battery forklifts</strong> (1–10 tons), <strong>electric forklifts</strong> (1.3–2.0 tons), <strong>diesel and LPG forklifts</strong> (6–10 tons), <strong>reach trucks</strong>, <strong>electric pallet trucks</strong>, <strong>warehouse stackers</strong>, <strong>heavy forklifts</strong> (20–32 tons), and <strong>wheel loaders</strong> (1–5 tons). Whether you need a forklift for a warehouse, cold storage, manufacturing plant, construction site, or logistics hub, we have the right unit at a competitive price.
               </p>
               <p>
-                Whether you need a single unit or a complete fleet, we provide tailored solutions including equipment
-                selection, site assessment, operator training, preventive maintenance programs, and 24/7 emergency support.
+                Every purchase comes with full after-sales support: <strong>genuine HELI spare parts</strong>, factory-trained technicians, preventive maintenance programs, and on-site service coverage across the Philippines. Contact us at <strong>+63 991 113 4556</strong> to get a quotation or arrange a product demonstration at your facility.
               </p>
             </div>
             <div className="mt-8 text-center">
@@ -462,6 +580,45 @@ export default function ProductsPage() {
               >
                 Learn More About Us
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-[#F7F7F7]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
+            <div className="w-10 h-0.5 bg-[#E60012] mb-10" />
+            <div className="space-y-6">
+              {[
+                {
+                  q: 'What is the price of a HELI forklift in the Philippines?',
+                  a: 'HELI forklift prices vary by model, type, and capacity. Contact us at +63 991 113 4556 for a detailed quotation tailored to your requirements and budget.'
+                },
+                {
+                  q: 'What types of forklifts do you sell in the Philippines?',
+                  a: 'We sell lithium battery forklifts, electric forklifts, diesel forklifts, LPG forklifts, reach trucks, electric pallet trucks, warehouse stackers, heavy forklifts up to 32 tons, and wheel loaders — all HELI brand.'
+                },
+                {
+                  q: 'Do you deliver forklifts outside Bulacan?',
+                  a: 'Yes. We deliver and service forklifts across Luzon including Metro Manila, Pampanga, Nueva Ecija, Tarlac, Laguna, Cavite, Batangas, Rizal, and all surrounding provinces.'
+                },
+                {
+                  q: 'Which forklift is best for indoor warehouse use in the Philippines?',
+                  a: 'For indoor warehouses, we recommend HELI lithium battery forklifts or electric forklifts — zero emissions, quiet operation, and low running costs. For narrow aisles and vertical storage, HELI reach trucks are ideal.'
+                },
+                {
+                  q: 'Is financing available for forklift purchases?',
+                  a: 'Yes, flexible payment plans and financing options are available. Contact us to discuss installment schemes suited to your budget.'
+                },
+              ].map((item, i) => (
+                <div key={i} className="bg-white border border-gray-100 p-6">
+                  <h3 className="font-bold text-gray-900 mb-2">{item.q}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

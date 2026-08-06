@@ -5,6 +5,32 @@ import Link from 'next/link'
 
 const ogImage = '/og-image.jpg'
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Forklift Services in the Philippines — Heli Forklift Philippines',
+  description: 'Complete forklift maintenance, repair, installation, and operator training services across the Philippines from authorized HELI dealer in Guiguinto, Bulacan.',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, item: { '@type': 'Service', name: 'Forklift Preventive Maintenance Philippines', description: 'Scheduled preventive maintenance (PMS) for HELI forklifts and all brands across Metro Manila, Bulacan, Central Luzon, and surrounding provinces.', provider: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'Philippines', serviceType: 'Forklift Maintenance' } },
+    { '@type': 'ListItem', position: 2, item: { '@type': 'Service', name: 'Forklift Repair Philippines', description: 'Emergency and scheduled forklift repair services for all brands. On-site and workshop repairs with genuine parts. Fast response time across Luzon.', provider: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'Philippines', serviceType: 'Forklift Repair' } },
+    { '@type': 'ListItem', position: 3, item: { '@type': 'Service', name: 'Forklift Operator Training Philippines', description: 'Certified forklift operator training and safety programs for warehouse and industrial workers across the Philippines.', provider: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'Philippines', serviceType: 'Forklift Training' } },
+    { '@type': 'ListItem', position: 4, item: { '@type': 'Service', name: 'Forklift Parts and Spare Parts Philippines', description: 'Genuine HELI forklift spare parts and accessories available for all models. Fast delivery across Luzon.', provider: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'Philippines', serviceType: 'Forklift Parts' } },
+    { '@type': 'ListItem', position: 5, item: { '@type': 'Service', name: 'Forklift Installation Philippines', description: 'Professional forklift installation, setup, and commissioning services with safety compliance checks and operator orientation.', provider: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'Philippines', serviceType: 'Forklift Installation' } },
+    { '@type': 'ListItem', position: 6, item: { '@type': 'Service', name: 'Forklift Rental Philippines', description: 'Short-term and long-term forklift rental and leasing options for businesses across the Philippines.', provider: { '@type': 'LocalBusiness', name: 'Heli Forklift Philippines' }, areaServed: 'Philippines', serviceType: 'Forklift Rental' } },
+  ],
+}
+
+const serviceFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Do you service forklifts outside Bulacan?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Heli Forklift Philippines provides forklift maintenance and repair services across Metro Manila, Bulacan, Pampanga, Nueva Ecija, Tarlac, Laguna, Cavite, Batangas, Rizal, and surrounding provinces throughout Luzon.' } },
+    { '@type': 'Question', name: 'How often should a forklift be serviced?', acceptedAnswer: { '@type': 'Answer', text: 'HELI recommends preventive maintenance every 250 operating hours or every 3 months, whichever comes first. High-usage forklifts in multi-shift operations may require more frequent servicing. Our team can set up a customized maintenance schedule for your fleet.' } },
+    { '@type': 'Question', name: 'Do you offer emergency forklift repair in the Philippines?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We offer emergency forklift repair services with fast response times. Contact us immediately at +63 991 113 4556 via call, Viber, or Messenger for urgent repair assistance.' } },
+    { '@type': 'Question', name: 'Do you sell genuine HELI forklift spare parts?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We supply genuine HELI forklift spare parts and accessories for all models including lithium battery forklifts, electric forklifts, diesel forklifts, and reach trucks. Parts are available at our Guiguinto, Bulacan branch.' } },
+  ],
+}
+
 export const metadata: Metadata = {
   title: 'Services — Forklift Maintenance, Repair & Training in the Philippines',
   description: 'Complete forklift after-sales services in the Philippines from our Bulacan base: preventive maintenance, emergency repair, professional installation, operator training, and equipment customization for HELI forklifts.',
@@ -158,15 +184,18 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceFaqSchema) }} />
+
       {/* Hero */}
       <section className="bg-[#0C1019] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-              Our Services
+              Forklift Maintenance, Repair & Service in the Philippines
             </h1>
             <p className="text-xl text-gray-400">
-              Comprehensive support services to keep your operations running smoothly and efficiently
+              Complete after-sales support for HELI forklifts — based in Guiguinto, Bulacan, serving all of Luzon
             </p>
           </div>
         </div>
@@ -230,13 +259,65 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Rich content + coverage */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Forklift Service Coverage Across the Philippines</h2>
+            <div className="w-10 h-0.5 bg-[#E60012] mb-8" />
+            <div className="prose prose-lg max-w-none text-gray-600 space-y-4 mb-10">
+              <p>
+                <strong>Heli Forklift Philippines</strong> provides comprehensive forklift maintenance and repair services across <strong>Metro Manila, Bulacan, Pampanga, Nueva Ecija, Tarlac, Laguna, Cavite, Batangas, Rizal</strong>, and all surrounding provinces. Our team of factory-trained technicians handles all HELI forklift models — lithium battery, electric, diesel, and LPG — with guaranteed genuine spare parts.
+              </p>
+              <p>
+                We offer <strong>preventive maintenance (PMS)</strong> scheduled every 250 operating hours, <strong>emergency repair</strong> with fast on-site response, <strong>forklift overhaul</strong> for aging units, and <strong>certified operator training</strong> for warehouse and industrial staff. All services are performed by experienced HELI-certified technicians from our base in <strong>Guiguinto, Bulacan</strong>.
+              </p>
+              <p>
+                For urgent breakdown repairs, contact us immediately at <strong>+63 991 113 4556</strong> via call, Viber, or Messenger. We respond fast to minimize your operational downtime.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {['Metro Manila', 'Bulacan', 'Pampanga', 'Nueva Ecija', 'Tarlac', 'Laguna', 'Cavite', 'Batangas', 'Rizal', 'Zambales', 'Bataan', 'Quezon Province'].map((area) => (
+                <div key={area} className="flex items-center gap-2 text-sm text-gray-700 bg-[#F7F7F7] px-3 py-2">
+                  <span className="text-[#E60012] font-bold">✓</span> {area}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-[#F7F7F7]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
+            <div className="w-10 h-0.5 bg-[#E60012] mb-10" />
+            <div className="space-y-6">
+              {[
+                { q: 'Do you service forklifts outside Bulacan?', a: 'Yes. We cover Metro Manila, Bulacan, Pampanga, Nueva Ecija, Tarlac, Laguna, Cavite, Batangas, Rizal, and surrounding Luzon provinces.' },
+                { q: 'How often should a forklift be serviced?', a: 'HELI recommends preventive maintenance every 250 operating hours or every 3 months, whichever comes first. We can set up a custom maintenance schedule for your fleet.' },
+                { q: 'Do you offer emergency forklift repair?', a: 'Yes. Call or message us at +63 991 113 4556 via call, Viber, or Messenger for urgent breakdown assistance. Fast on-site response across Luzon.' },
+                { q: 'Do you sell genuine HELI spare parts?', a: 'Yes. We supply genuine HELI spare parts for all models — lithium battery, electric, diesel forklifts, reach trucks, and warehouse equipment. Available at our Guiguinto, Bulacan branch.' },
+                { q: 'Do you offer forklift rental in the Philippines?', a: 'Yes, short-term and long-term forklift rental and leasing options are available. Contact us to discuss rates and availability.' },
+              ].map((item, i) => (
+                <div key={i} className="bg-white border border-gray-100 p-6">
+                  <h3 className="font-bold text-gray-900 mb-2">{item.q}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-[#E60012]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Need Service Support?</h2>
+            <h2 className="text-3xl font-bold mb-4">Need Forklift Service in the Philippines?</h2>
             <p className="text-red-100 text-lg mb-8">
-              Contact us today to schedule a service or discuss your requirements
+              Contact us today to schedule maintenance, request a repair, or get a service quotation
             </p>
             <Link
               href="/contact"
